@@ -16,7 +16,7 @@
 
 header{
   display: flex;
-  padding: 4px 16px 8px;
+  padding: 4px 16px 3px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -107,6 +107,14 @@ header{
   width: 100%;
   outline: none;
 }
+.header-right-section div:nth-child(3) span{
+  display: none;
+}
+.header-right-section div:nth-child(4) span{
+  display: none;
+}
+
+
 .header-right-section div:nth-child(2) svg{
   display: none;
 }
@@ -167,5 +175,26 @@ header{
     .header-right-section div:nth-child(5){
         display: flex;
     }
+}
+
+@media  screen and (min-width:1190px) {
+      header{
+        max-width: 1600px;
+      }
+      .header-right-section div:nth-child(3) span{
+        display: flex;
+      }
+      .header-right-section div:nth-child(4) span{
+        display: flex;
+      }
+      .search-main{
+         width: 100%; 
+      }
+      .header-left-section div:nth-child(3) {
+        max-width: 820px;
+      }
+      .header-right-section {
+        gap: 50px;
+      }
 }
 
