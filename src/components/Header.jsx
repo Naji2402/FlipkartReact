@@ -8,6 +8,7 @@ import SellerLogo from '../assets/Logos/Become a Seller.svg'
 import DropdownLogo from '../assets/Logos/Dropdown.svg'
 import SearchIcon from '../assets/Logos/SearchIcon.svg'
 
+
  function Header(){
      return (
         <>
