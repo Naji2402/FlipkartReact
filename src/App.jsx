@@ -1,13 +1,11 @@
 import Header from "./components/Header"
-import Search from "./components/SearchProducts"
-import Slide from "./components/SliderShow"
+import Main from "./components/MainBody"
 
 function App() {
   return (
     <>
         <Header />
-        <Search />
-        <Slide />
+        <Main />
     </>
   )
 }

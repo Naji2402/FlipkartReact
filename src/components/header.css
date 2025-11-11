@@ -15,12 +15,15 @@
 
 
 header{
-  display: flex;
   padding: 4px 16px 3px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   overflow: hidden;
+  background-color: white;
+}
+.header-main{
+  display: flex;
   max-width: 480px;
   margin: 0 auto;
 }
@@ -138,9 +141,9 @@ header{
 }
 
 @media screen and (min-width:768px) {
-    header{
-        max-width: 996px;
-        padding: 12px;
+    .header-main{
+      max-width: 996px;
+      padding: 12px;
     }
     .hamburger img{
         display: none;
@@ -178,7 +181,7 @@ header{
 }
 
 @media  screen and (min-width:1190px) {
-      header{
+      .header-main{
         max-width: 1600px;
       }
       .header-right-section div:nth-child(3) span{

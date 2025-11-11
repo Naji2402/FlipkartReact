@@ -3,13 +3,29 @@
 }
 .slide-image-section{
     width: 100%;
-    padding: 12px 16px;
+    padding: 12px 16px 8px 16px;
     display: flex;
     gap: 20px;
     overflow: scroll;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
 }
-.slide-image-section img{
+.slide-image{
     width: 100%;
     border-radius: 15px;
+}
+.hide{
+    display: none;
+}
+.slide-progress-bar{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+.slide-progress-bar div{
+    width: 12px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.13);
 }

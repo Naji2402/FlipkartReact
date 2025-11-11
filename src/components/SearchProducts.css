@@ -42,6 +42,7 @@
     font-family: Regular;
     outline: none;
     padding-bottom: 1px;
+    background-color: transparent;
 }
 .search-section-main input::placeholder{
     color: rgb(51, 51, 51);

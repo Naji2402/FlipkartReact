@@ -14,7 +14,8 @@ import SearchIcon from '../assets/Logos/SearchIcon.svg'
      return (
         <>
             <header>
-                <div className='header-left-section'>
+                <div className='header-main'>
+                    <div className='header-left-section'>
                     <div className='hamburger'>
                         <img src={HamLogo} alt="hamburger logo icom" />
                     </div>
@@ -52,6 +53,7 @@ import SearchIcon from '../assets/Logos/SearchIcon.svg'
                     <div className='drop-down-main'>
                         <img src={DropdownLogo} alt="dropdown logo" />
                     </div>
+                </div>
                 </div>
             </header>
         </>
