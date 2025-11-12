@@ -43,7 +43,7 @@ const categoriesCardDetails = [
     },
     {
       image: Toys,
-      text: 'Toys,Baby...'
+      text: 'Toys, Baby...'
     },
     {
       image: SellPhones,
@@ -65,7 +65,7 @@ const categoriesCardDetails = [
     },
     {
       image: FoodAndHealth,
-      text: 'Food & Health'
+      text: 'Food & Heal...'
     },
     {
       image: HomeAndKichecn,
