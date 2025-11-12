@@ -1,6 +1,7 @@
 .slide-section-main{
     width: 100%;
 }
+
 .slide-image-section{
     width: 100%;
     padding: 12px 16px 8px 16px;
@@ -9,23 +10,62 @@
     overflow: scroll;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
+    position: relative;
+    align-items: center;
 }
+
 .slide-image{
     width: 100%;
     border-radius: 15px;
 }
+
+.arrow-main{
+    position: absolute;
+    width: 40px;
+    height: 88px;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.left-arrow{
+    left: 0;
+}
+.right-arrow{
+    right: 0;
+}
+.arrow {
+    width: 24px;
+    height: 24px;
+}
 .hide{
     display: none;
 }
+
 .slide-progress-bar{
     display: flex;
     gap: 10px;
     width: 100%;
     justify-content: center;
 }
-.slide-progress-bar div{
-    width: 12px;
+
+.progress-bar {
+    width: 48px;
     height: 4px;
     border-radius: 20px;
+    background-color: black;
+}
+
+.progress-bar.close{
     background-color: rgba(0, 0, 0, 0.13);
+    width: 12px;
+}
+
+
+
+@media screen and (min-width: 1191px) {
+    .arrow-main{
+        display: flex;
+    }
 }
