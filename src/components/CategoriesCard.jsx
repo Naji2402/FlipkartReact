@@ -6,7 +6,7 @@ import './CategoriesCard.css';
         <>
           <div className='card-main'>
             <div>
-                <img src={props.img}/>
+                <img src={props.img} alt={props.alt}/>
             </div>
             <p>{props.text}</p>
           </div>  

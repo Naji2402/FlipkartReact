@@ -5,11 +5,10 @@
     min-width: 66px;
 }
 .card-main img{
-    width: 50px;
+    width: 51px;
 }   
 
 .card-main p{
-    margin-top: 2px;
     font-size: 10px;
     line-height: 14px;
     font-weight: 400;
@@ -17,3 +16,4 @@
     text-wrap: nowrap;
     text-overflow: ellipsis;
 }
+

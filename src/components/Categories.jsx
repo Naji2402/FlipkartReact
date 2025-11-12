@@ -23,89 +23,108 @@ const categoriesCardDetails = [
   [
     {
       image: Fashion,
-      text: 'Fashion'
+      text: 'Fashion',
+      alt: 'Fasion category logo'
     },
     {
       image: Travel,
-      text: 'Travel'
+      text: 'Travel',
+      alt: 'Travel category logo'
     },
     {
       image: Appliances,
-      text: 'Appliances'
+      text: 'Appliances',
+      alt: 'Appliances category logo'
     },
     {
       image: Beauty,
-      text: 'Beauty'
+      text: 'Beauty',
+      alt: 'Beauty category logo'
     },
     {
       image: Electronics,
-      text: 'Electronics'
+      text: 'Electronics',
+      alt: 'Electronics category logo'
     },
     {
       image: Toys,
-      text: 'Toys, Baby...'
+      text: 'Toys, Baby...',
+      alt: 'Toys baby category logo'
     },
     {
       image: SellPhones,
-      text: 'Sell Phone'
+      text: 'Sell Phone',
+      alt: 'Sell Phone category logo'
     },
     {
       image: FlipkartPay,
-      text: 'Flipkart Pay'
+      text: 'Flipkart Pay',
+      alt: 'Flipkart pay category logo'
     },
     {
       image: SuperCoin,
-      text: 'Super Coin'
+      text: 'Super Coin',
+      alt: 'Supercoin category logo'
     },
   ],
   [
     {
       image: Mobiles,
-      text: 'Mobiles'
+      text: 'Mobiles',
+      alt: 'Mobiles category logo'
     },
     {
       image: FoodAndHealth,
-      text: 'Food & Heal...'
+      text: 'Food & Heal...',
+      alt: 'food and health category logo'
     },
     {
       image: HomeAndKichecn,
-      text: 'Home & Kitc...'
+      text: 'Home & Kitc...',
+      alt: 'Home and kitchen category logo'
     },
     {
       image: AutoAcc,
-      text: 'Auto Acc'
+      text: 'Auto Acc',
+      alt: 'Auto acc category logo'
     },
     {
       image: Furniture,
-      text: 'Furniture'
+      text: 'Furniture',
+      alt: 'Furniture category logo'
     },
     {
       image: Sports,
-      text: 'Sports'
+      text: 'Sports',
+      alt: 'Sports category logo'
     },
     {
       image: GenZTrends,
-      text: 'GenZ Trends'
+      text: 'GenZ Trends',
+      alt: 'Genz trends category logo'
     },
     {
       image: NextGen,
-      text: 'Next Gen'
+      text: 'Next Gen',
+      alt: 'Next gen category logo'
     },
   ]
 ];
+
+
 
  function Categories(){
      return (
         <>
           <div className='categories'>
             <div className='categories-top-section categories-section'>
-              {categoriesCardDetails[0].map((card) => {
-                return <CategoriesCard img={card.image} text={card.text} />
+              {categoriesCardDetails[0].map((card, index) => {
+                return <CategoriesCard key={index} img={card.image} text={card.text} alt={card.alt} />
               })}
             </div>  
             <div className='categories-bottom-section categories-section'>
-               {categoriesCardDetails[1].map((card) => {
-                return <CategoriesCard img={card.image} text={card.text} />
+               {categoriesCardDetails[1].map((card, index) => {
+                return <CategoriesCard key={index} img={card.image} text={card.text} alt={card.alt} />
               })}
             </div>  
           </div>  

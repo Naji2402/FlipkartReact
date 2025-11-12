@@ -1,0 +1,48 @@
+.random-box{
+    padding: 12px 16px;
+}
+.random-box-main{
+    background-color: #d7f2e8;
+    padding: 20px 12px;
+    border-radius: 15px;
+}
+
+.random-box-main h1{
+    font-size: 17px;
+    letter-spacing: -0.01px;
+    line-height: 24px;
+    font-family: SemiBold;   
+    margin-bottom: 15px;
+}
+
+.random-products{
+    background-color: white;
+    padding: 8px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8px;
+    row-gap: 10px;
+}
+.random-product-image-main{
+    padding: 20px 0;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+}
+.random-product-image-main img{
+    width: 100%;
+}
+.random-product-details-main{
+    padding-top: 5px;
+}
+.random-product-details-main span{
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Regular;
+}
+.random-product-details-main h3{
+    font-size: 14px;
+    letter-spacing: -0.01px;
+    line-height: 20px;
+    font-family: SemiBold;
+}
