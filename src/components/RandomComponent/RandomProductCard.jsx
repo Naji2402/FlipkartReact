@@ -11,7 +11,10 @@
                     <h3>{props.price}</h3>
                 </div>
             </div>
+            
         </>
 )}
+
+   
 
  export default RandomCard;

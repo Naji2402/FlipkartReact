@@ -40,6 +40,7 @@ const randomProductDetails = [
                     </div>
                 </div>
             </div>
+            <div className="underline"></div>
         </>
 )}
 

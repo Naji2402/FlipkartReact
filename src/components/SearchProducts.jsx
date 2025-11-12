@@ -23,5 +23,6 @@ import SearchIcon from '../assets/Logos/BlueSearchIcon.svg'
 )}
 
 
+
  export default Search;
 
