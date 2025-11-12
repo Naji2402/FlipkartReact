@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './SlideShow.css';
-import SlideImg1 from '../assets/Images/SlideImage.webp';
-import SlideImg2 from '../assets/Images/SlideImage2.webp';
+import SlideImg1 from './Images/SlideImage.webp';
+import SlideImg2 from './Images/SlideImage2.webp';
 import ArrowRight from '../assets/Logos/ArrowRight.svg';
 import ArrowLeft from '../assets/Logos/ArrowLeft.svg';
 
