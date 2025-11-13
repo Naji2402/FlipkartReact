@@ -1,7 +1,7 @@
-import Search from './SearchProducts'
-import Slide from './SliderShow';
-import Categories from './Categories';
-import RandomBox from './RandomComponent/RandomBox';
+import Search from '../SearchComponent/SearchProducts'
+import Slide from '../SlideshowComponent/SliderShow';
+import Categories from '../CategoriesComponent/Categories';
+import RandomBox from '../RandomComponent/RandomBox';
 import './MainBody.css';
 
  function Main(){

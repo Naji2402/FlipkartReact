@@ -1,12 +1,12 @@
 import './header.css';
-import HamLogo from '../assets/Logos/Menu.svg';
-import FlipLogo from '../assets/Logos/FlipkartLogo.svg';
-import GetAppLogo from '../assets/Logos/Get App.svg';
-import LoginLogo from '../assets/Logos/Login.svg';
-import CartLogo from '../assets/Logos/Cart.svg';
-import SellerLogo from '../assets/Logos/Become a Seller.svg';
-import DropdownLogo from '../assets/Logos/Dropdown.svg';
-import SearchIcon from '../assets/Logos/SearchIcon.svg';
+import HamLogo from './HeaderLogos/Menu.svg';
+import FlipLogo from './HeaderLogos/FlipkartLogo.svg';
+import GetAppLogo from './HeaderLogos/Get App.svg';
+import LoginLogo from './HeaderLogos/Login.svg';
+import CartLogo from './HeaderLogos/Cart.svg';
+import SellerLogo from './HeaderLogos/Become a Seller.svg';
+import DropdownLogo from './HeaderLogos/Dropdown.svg';
+import SearchIcon from './HeaderLogos/SearchIcon.svg';
 
 
 

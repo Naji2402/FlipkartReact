@@ -1,7 +1,7 @@
 import './SearchProducts.css';
-import LocationLogo from '../assets/Logos/Location.svg'
-import RightArrow from '../assets/Logos/RightArrow.svg'
-import SearchIcon from '../assets/Logos/BlueSearchIcon.svg'
+import LocationLogo from './SearchComponentIcons/Location.svg'
+import RightArrow from './SearchComponentIcons/RightArrow.svg'
+import SearchIcon from './SearchComponentIcons/BlueSearchIcon.svg'
  function Search(){
      return (
         <>
