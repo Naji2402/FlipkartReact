@@ -1,11 +1,14 @@
-import Header from "./components/HeaderComponent/Header"
-import Main from "./components/MainBody/MainBody"
+import Final from "./components/FinalComponent/Final"
+import Test from "./components/ProductPageComponent/test"
+import { Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
     <>
-        <Header />
-        <Main />
+        <Routes>
+            <Route path='/' element={<Final />} />
+            <Route path='test' element={<Test />} />
+        </Routes>
     </>
   )
 }

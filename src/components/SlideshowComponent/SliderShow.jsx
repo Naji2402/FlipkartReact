@@ -49,8 +49,6 @@ let slides = [
     
 ]
 
-
-
  function Slide(){
 
     const [current, setCurrent] = useState(0);
@@ -59,7 +57,9 @@ let slides = [
         setTimeout(() => {
             setCurrent(current === slides.length -1 ? 0 : current + 1 )
         }, 3000)
-    })
+    },[current])
+
+    
 
     let slideImages = slides.map((img, index) => {
         return <img key={index} src={img.image} alt={img.description} className={index === current ? "slide-image" : "slide-image hide"}/>
