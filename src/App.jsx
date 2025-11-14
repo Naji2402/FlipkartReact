@@ -1,5 +1,5 @@
 import Final from "./components/FinalComponent/Final"
-import Test from "./components/ProductPageComponent/test"
+import PFinal from "./components/ProductPage/ProductPageFinal/ProductPageFinal"
 import { Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
         <Routes>
             <Route path='/' element={<Final />} />
-            <Route path='test' element={<Test />} />
+            <Route path='productPage' element={<PFinal />} />
         </Routes>
     </>
   )

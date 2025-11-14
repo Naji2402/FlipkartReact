@@ -17,7 +17,7 @@ import Furniture from './CategoriesComponentImages/furnitureCategory.webp';
 import Sports from './CategoriesComponentImages/sportsCategory.webp';
 import GenZTrends from './CategoriesComponentImages/genztrendsCategory.webp';
 import NextGen from './CategoriesComponentImages/nextgenCategory.webp';
-
+import { Link } from 'react-router-dom'
 
 const categoriesCardDetails = [
   [
@@ -119,12 +119,12 @@ const categoriesCardDetails = [
           <div className='categories'>
             <div className='categories-top-section categories-section'>
               {categoriesCardDetails[0].map((card, index) => {
-                return <CategoriesCard key={index} img={card.image} text={card.text} alt={card.alt} />
+                return <Link to='productPage' key={index}><CategoriesCard key={index} img={card.image} text={card.text} alt={card.alt} /></Link>
               })}
             </div>  
             <div className='categories-bottom-section categories-section'>
                {categoriesCardDetails[1].map((card, index) => {
-                return <CategoriesCard key={index} img={card.image} text={card.text} alt={card.alt} />
+                return <Link to='productPage' key={index}><CategoriesCard key={index} img={card.image} text={card.text} alt={card.alt} /></Link>
               })}
             </div>  
           </div>  

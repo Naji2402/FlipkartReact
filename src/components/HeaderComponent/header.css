@@ -12,9 +12,13 @@
   font-family: SemiBold;
   src: url("../../assets/Fonts/Inter-SemiBold.woff2");
 }
+@font-face {
+  font-family: Roboto;
+  src: url('../../assets//Fonts/roboto-regular.woff2');
+}
 
 
-header{
+.header{
   padding: 4px 16px 3px;
   justify-content: space-between;
   align-items: center;

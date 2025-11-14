@@ -1,0 +1,49 @@
+.filter-sort-main{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 12px; */
+    height: 47px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+}
+.filter-sort{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-sort div{
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.filter-sort img{
+    width: 20px;
+}
+.filter-sort h2{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 2px;
+    font-family: SemiBold;
+}
+.filter-sort div{
+    position: relative;
+}
+.filter-sort span{
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 6px;
+    font-weight: 400;
+    font-family: SemiBold;
+    padding: 2px 4px;
+    top: 0;
+    left: 11px;
+    border-radius: 100%;
+}
+.middle-line{
+    width: 1px;
+    height: 16px;
+    background-color: #D5D7DB;
+}

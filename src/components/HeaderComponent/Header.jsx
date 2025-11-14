@@ -13,7 +13,7 @@ import SearchIcon from './HeaderLogos/SearchIcon.svg';
  function Header(){
      return (
         <>
-            <header>
+            <header className='header'>
                 <div className='header-main'>
                     <div className='header-left-section'>
                     <div className='hamburger'>
