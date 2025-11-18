@@ -1,0 +1,32 @@
+.p-header-large{
+    display: none;
+    height: 56px;
+    width: 100%;
+}
+.p-header-large-main{
+    height: 100%;
+    width: 100%;
+    background-color: #2874f0;
+    display: flex;
+    align-items: center;
+}
+
+.p-header-large-left div div img{
+    width: 10px;
+}
+.p-header-large-left div div p{
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 15px;
+    font-family: Roboto;
+}
+
+.flip-logo{
+    width: 75px;
+}
+@media screen and (min-width:1170px){
+    .p-header-large{
+        display: block;
+    }
+}

@@ -39,3 +39,9 @@
 .p-header-right .cart{
     margin-left: 17px;
 }
+
+@media screen and (min-width:1170px){
+    .p-header{
+        display: none;
+    }
+}
