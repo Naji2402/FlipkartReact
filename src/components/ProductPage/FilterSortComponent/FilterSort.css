@@ -47,3 +47,9 @@
     height: 16px;
     background-color: #D5D7DB;
 }
+
+@media  screen and (min-width:1170px) {
+    .filter-sort-main{
+        display: none;
+    }
+}

@@ -23,3 +23,9 @@
     line-height: 16px;
     font-family: Roboto;
 }
+
+@media screen and (min-width:1170px) {
+    .filter-buttons-main{
+        display: none;
+    }
+}
