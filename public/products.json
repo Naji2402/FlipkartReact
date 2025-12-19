@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "image": "/productImages/football-1.webp",
+        "name": "LatinX WCUP 2022 Football-Size: 5",
+        "discountPerc": 77,
+        "price": 424,
+        "realPrice": 1899,
+        "isSponsored": true
+    },
+    {
+        "id": 2,
+        "image": "/productImages/shinGuard-1.webp",
+        "name": "SYNCO Wolf Football Shin Guard | Protective Gear with EVA Foam for Football Matches | Football Shin Guard",
+        "discountPerc": 55,
+        "price": 198,
+        "realPrice": 449,
+        "isSponsored": true
+    },
+    {
+        "id": 3,
+        "image": "/productImages/football-2.webp",
+        "name": "RASCO Kick with Pump Football-Size: 5",
+        "discountPerc": 67,
+        "price": 483,
+        "realPrice": 1499,
+        "isSponsored": true
+    },
+    {
+        "id": 4,
+        "image": "/productImages/football-3.webp",
+        "name": "NIVIA Storm with Pump Football-Size: 5",
+        "discountPerc": 56,
+        "price": 356,
+        "realPrice": 814,
+        "isSponsored": false 
+    },
+    {
+        "id": 5,
+        "image": "/productImages/football-4.webp",
+        "name": "NIVIA Storm Football-Size: 5",
+        "discountPerc": 54,
+        "price": 321,
+        "realPrice": 699,
+        "isSponsored": false 
+    },
+    {
+        "id": 6,
+        "image": "/productImages/kit-1.webp",
+        "name": "WHACKK Kick Soccer/Football/Basketball/Volleyball/Throwball Kit Bag",
+        "discountPerc": 50,
+        "price": 499,
+        "realPrice": 999,
+        "isSponsored": true 
+    }
+]
+

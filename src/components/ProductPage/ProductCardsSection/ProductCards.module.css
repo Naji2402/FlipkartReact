@@ -1,0 +1,137 @@
+
+
+.productMain{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: space-between; */
+    border-top: 1px solid rgba(0, 0, 0, 0.11);
+    margin-top: 10px;
+    row-gap: 18px;
+}
+
+.productCard{
+    padding: 26px 8px 0 ;
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.productImageSec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.likeSign{
+    width: 24px;
+    position: absolute;
+    right: 3px;
+    top: -15px;
+}
+
+.product{
+    width: 170px;
+}
+
+
+
+.productDetailsSec span{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.01px;
+    font-family: Regular;
+    color: rgb(184, 187, 191);
+   
+}
+
+
+
+.productDetailsSec h3{
+    font-size: 14px;
+    font-family: Regular;
+    font-weight: 400;
+    letter-spacing: -0.01px;
+    line-height: 20px;
+    color: rgb(32, 34, 36);
+     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 175px;
+}
+
+.priceDetails{
+    display: flex;
+    margin-top: 3px;
+    gap: 5px;
+}
+
+.discountDet{
+    display: flex;
+    align-items: center;
+}
+
+.discountDet p{
+    color: #008C00;
+    font-size: 14px;
+    font-family: SemiBold;   
+    font-weight: 400;
+    letter-spacing: -0.01px;
+    line-height: 20px;
+}
+
+.discountArrow{
+    width: 16px;
+}
+
+.prices{
+    display: flex;
+    gap: 5px;
+}
+
+.prices p{
+    font-size: 14px;
+    font-family: SemiBold;   
+    font-weight: 400;
+    letter-spacing: -0.01px;
+    line-height: 20px;
+}
+.prices p:nth-child(1){
+    color: #717478;
+    text-decoration: line-through;
+}
+
+.dealStatus{
+    color: #26A541;
+    font-size: 12px;
+    padding: 4px;
+    background-color: #E7F8EC;
+    width: fit-content;
+    border-radius: 2px;
+    /* font-family: Roboto; */
+}
+
+.ratingStars{
+    display: flex;
+    gap: 3px;
+    margin-top: 12px;
+}
+
+.ratingStars img{
+    width: 13px;
+}
+
+.ratingSection{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.assuredLogo{
+    width: 55px;
+    margin-top: 12px;
+}
