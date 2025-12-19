@@ -5,6 +5,8 @@ import SearchIcon from "./PHeaderLargeAssets/SearchIcon.svg";
 import ArrowDown from "./PHeaderLargeAssets/arrowDown.svg";
 import Cart from './PHeaderLargeAssets/CartLogo.svg';
 
+
+
 function PHeaderLarge() {
   return (
     <>
