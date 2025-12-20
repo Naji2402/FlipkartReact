@@ -18,6 +18,7 @@
     gap: 5px;
     background-color: white;
     overflow: hidden;
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
 }
 
 .productImageSec{
@@ -30,13 +31,29 @@
 .likeSign{
     width: 24px;
     position: absolute;
-    right: 3px;
-    top: -15px;
+    right: 8px;
+    top: -13px;
+}
+
+.bestSeller{
+    position: absolute;
+    left: 0;
+    top: -8px;
+    font-size: 12px;
+    padding: 0 4px;
+    background-color: rgb(0, 160, 152);
+    color: white;
+    font-family: Roboto;
+    border-radius: 2px;
+}
+.bestSellerNone{
+    display: none;
 }
 
 .product{
     width: 170px;
 }
+
 
 
 
@@ -51,7 +68,6 @@
 }
 
 
-
 .productDetailsSec h3{
     font-size: 14px;
     font-family: Regular;
@@ -62,7 +78,7 @@
      white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 175px;
+    /* width: 175px; */
 }
 
 .priceDetails{

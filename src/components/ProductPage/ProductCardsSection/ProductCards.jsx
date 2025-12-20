@@ -16,16 +16,15 @@ function ProductCards() {
         console.log(err);
       }
     }
-
     getProducts();
   }, []);
 
-
+      
 
   return (
     <>
       <div className={styles.productMain}>
-        {products.map((product, i) => {
+        {products.map((product) => {
           return (
             <ProductCard
               key={product.id}
@@ -35,6 +34,7 @@ function ProductCards() {
               discountPercentage={product.discountPerc}
               isSponsored={product.isSponsored}
               productImage={product.image}
+              isBestSeller={product.isBestSeller}
             />
           );
         })}

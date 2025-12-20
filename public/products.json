@@ -6,7 +6,8 @@
         "discountPerc": 77,
         "price": 424,
         "realPrice": 1899,
-        "isSponsored": true
+        "isSponsored": true,
+        "isBestSeller": false
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "discountPerc": 55,
         "price": 198,
         "realPrice": 449,
-        "isSponsored": true
+        "isSponsored": true,
+        "isBestSeller": false
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "discountPerc": 67,
         "price": 483,
         "realPrice": 1499,
-        "isSponsored": true
+        "isSponsored": true,
+        "isBestSeller": false
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "discountPerc": 56,
         "price": 356,
         "realPrice": 814,
-        "isSponsored": false 
+        "isSponsored": false ,
+        "isBestSeller": true
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "discountPerc": 54,
         "price": 321,
         "realPrice": 699,
-        "isSponsored": false 
+        "isSponsored": false ,
+        "isBestSeller": false
     },
     {
         "id": 6,
@@ -51,7 +56,7 @@
         "discountPerc": 50,
         "price": 499,
         "realPrice": 999,
-        "isSponsored": true 
+        "isSponsored": true ,
+        "isBestSeller": false
     }
 ]
-
