@@ -88,6 +88,18 @@
     font-family: Roboto;
 }
 
+.footballCategoryList p{
+     font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2874F0;
+    font-family: Roboto;
+    margin-top: 5px;
+}
+
 .hide{
+    display: none;
+}
+.hideNew{
     display: none;
 }

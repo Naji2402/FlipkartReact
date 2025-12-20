@@ -1,4 +1,7 @@
 .p-header-large{
+    position: sticky;
+    z-index: 100;
+    top: 0;
     display: none;
     height: 56px;
     width: 100%;
