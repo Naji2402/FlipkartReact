@@ -1,6 +1,6 @@
-import styles from "./PAddSection.module.css";
-import AddDescription from "./AddDescription";
+import styles from "./PDescription.module.css";
 import { useState } from "react";
+import greyArrow from './PDescriptionAssets/greyArrow.svg'
 
 function PAddSection() {
   const [isCLicked, setIsClicked] = useState(false);
@@ -13,8 +13,16 @@ function PAddSection() {
  Vector X, Adidas, Spartan and more at reasonable prices from our store.`;
 
 
+
   return (
     <>
+      <div className={styles.pagePath}>
+        <p>Home</p>
+        <img src={greyArrow} alt="" />
+        <p>Sports</p>
+        <img src={greyArrow} alt="" />
+        <p>Football</p>
+      </div>
       <p
         className={`${styles.footballDescription} ${
           isCLicked ? styles.wrapText : ""
@@ -25,10 +33,11 @@ function PAddSection() {
       <span className={styles.ReadMore} onClick={readMore}>
         {isCLicked ? "See less" : "Read more"}
       </span>
-      {/* <div className={styles.pAddSection}>
-            <AddDescription addPositionLeft={true}/>
-            <AddDescription addPositionLeft={false}/>
-       </div>      */}
+
+      <div className={styles.productCount}>
+        <h1>Football</h1>
+        <p>{'(Showing 1-40 prducts of 5,160 products)'}</p>
+      </div>
     </>
   );
 }

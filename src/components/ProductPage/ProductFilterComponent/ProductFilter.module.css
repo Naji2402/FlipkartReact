@@ -1,0 +1,93 @@
+.filterSection{
+    background-color: white;
+    width: 270px;
+}
+.filterHeading{
+    display: flex;
+    align-items: center;
+    padding: 16px 16px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.filterHeading h1{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: SemiBold;
+    letter-spacing: 0.3px;
+    line-height: 25px;
+}
+
+.categories{
+    padding: 16px;
+}
+
+.categories h3{
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #212121;
+    font-family: SemiBold;
+}
+
+.sportsCategory{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.sportsCategory img{
+    width: 6px;
+}
+
+.sportsCategory span{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: Regular;
+    color: #878787;
+}
+
+.footballCategoryHeading{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.footballCategoryHeading img{
+    width: 10px;
+}
+
+.footballCategoryRotate{
+    transform: rotate(-90deg);
+}
+
+.footballCategoryHeading span{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: SemiBold;
+    color: #212121;
+}
+.footballCategoryList{
+    padding-left: 30px;
+}
+.footballCategoryList ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.footballCategoryList ul li{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #212121;
+    font-family: Roboto;
+}
+
+.hide{
+    display: none;
+}

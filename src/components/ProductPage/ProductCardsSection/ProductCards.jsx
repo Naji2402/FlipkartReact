@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./ProductCards.module.css";
 import ProductCard from "./ProductCard.jsx";
-// import products from './products.json'
 
 function ProductCards() {
+
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function ProductCards() {
     getProducts();
   }, []);
 
-      
+  
 
   return (
     <>

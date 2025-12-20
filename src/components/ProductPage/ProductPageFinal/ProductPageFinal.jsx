@@ -2,8 +2,9 @@ import PHeader from "../PHeaderComponent/PHeader";
 import FilterSort from "../FilterSortComponent/FilterSort";
 import FilterButtons from "../FilterButtonsComponent/FilterButtons";
 import PHeaderLarge from "../PHeaderLargeComponent/PHeaderLarge";
-import PAddSection from "../PAddSectionComponent/PAddSection";
+import PAddSection from "../PDescriptionComponent/PDescription";
 import ProductCards from "../ProductCardsSection/ProductCards";
+import ProductFilter from "../ProductFilterComponent/ProductFilter";
 
  function PFinal(){
      return (
@@ -14,6 +15,7 @@ import ProductCards from "../ProductCardsSection/ProductCards";
           <FilterButtons />
           <PAddSection />
           <ProductCards />
+          <ProductFilter />
         </>
 )}
 
