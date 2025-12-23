@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./BrandFilter.module.css";
 import arrow from "../ProductFilterAssets/greyArrow.svg";
-import search from "./BrandFIlterAssets/Search.svg"
+import search from "./BrandFIlterAssets/Search.svg";
 
 function BrandFilter() {
   const [brandClick, setBrandClick] = useState(true);
@@ -9,6 +9,8 @@ function BrandFilter() {
     setBrandClick(!brandClick);
   }
 
+
+  
   return (
     <>
       <div className={styles.filterSection}>
@@ -28,31 +30,27 @@ function BrandFilter() {
           >
             <div className={styles.brandSearch}>
               <img src={search} alt="" />
-              <input
-                type="search"
-                
-                placeholder="Search Brand"
-              />
+              <input type="search" placeholder="Search Brand" />
             </div>
             <div>
               <input type="checkbox" value="NIVIA" id="NIVIA" />
-              <label for="NIVIA">NIVIA</label>
+              <label htmlFor="NIVIA">NIVIA</label>
             </div>
             <div>
               <input type="checkbox" value="COSCO" id="COSCO" />
-              <label for="COSCO">COSCO</label>
+              <label htmlFor="COSCO">COSCO</label>
             </div>
             <div>
               <input type="checkbox" value="VECTOR X" id="VECTOR X" />
-              <label for="VECTOR X">VECTOR X</label>
+              <label htmlFor="VECTOR X">VECTOR X</label>
             </div>
             <div>
               <input type="checkbox" value="RASCO" id="RASCO" />
-              <label for="RASCO">RASCO</label>
+              <label htmlFor="RASCO">RASCO</label>
             </div>
             <div>
               <input type="checkbox" value="PUMA" id="PUMA" />
-              <label for="PUMA">PUMA</label>
+              <label htmlFor="PUMA">PUMA</label>
             </div>
             <p>605 MORE</p>
           </div>
@@ -61,5 +59,6 @@ function BrandFilter() {
     </>
   );
 }
+
 
 export default BrandFilter;

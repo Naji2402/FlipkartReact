@@ -74,6 +74,10 @@
   outline: none;
 }
 
+.brandSearch input::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
 .brandSearch input:focus {
   border-bottom: 2px solid blue;
 }
@@ -81,4 +85,3 @@
 .hide {
   display: none;
 }
-

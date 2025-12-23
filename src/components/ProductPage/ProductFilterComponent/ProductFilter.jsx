@@ -3,6 +3,7 @@ import styles from "./ProductFilter.module.css";
 import arrow from "./ProductFilterAssets/greyArrow.svg";
 import blackArrow from "./ProductFilterAssets/rightArrow.svg";
 import BrandFilter from "./BrandFilterComponent/BrandFilter.jsx";
+import PriceFilter from "./PriceFilter.jsx";
 
 function ProductFilter() {
   const [isClicked, setIsClicked] = useState(true);
@@ -67,6 +68,7 @@ function ProductFilter() {
           </div>
         </div>
       <BrandFilter />
+      <PriceFilter />
       </div>
     </>
   );
