@@ -10,6 +10,7 @@ function OtherFilter() {
   function openAvailabilityClick() {
     setAvailabilityClicked(!availabilityClicked);
   }
+
   function openInvoiceClick() {
     setInvoiceClicked(!invoiceClicked);
   }
@@ -17,7 +18,9 @@ function OtherFilter() {
   function openNewArrivalClick() {
     setNewArrivalsClicked(!newArrivalsClicked);
   }
-
+ 
+  
+  
   return (
     <>
       <div className={styles.availabilityFilter}>
@@ -34,7 +37,11 @@ function OtherFilter() {
             }`}
           />
         </div>
-        <div className={`${styles.options} ${availabilityClicked ? styles.close : ''}`}>
+        <div
+          className={`${styles.options} ${
+            availabilityClicked ? styles.close : ""
+          }`}
+        >
           <input type="checkbox" id="availability" />
           <label htmlFor="availability">Include Out of Stock</label>
         </div>
@@ -53,7 +60,9 @@ function OtherFilter() {
             }`}
           />
         </div>
-        <div className={`${styles.options} ${invoiceClicked ? styles.close : ''}`}>
+        <div
+          className={`${styles.options} ${invoiceClicked ? styles.close : ""}`}
+        >
           <input type="checkbox" id="GstInvoice" />
           <label htmlFor="GstInvoice">GST Invoice Available</label>
         </div>
@@ -72,7 +81,11 @@ function OtherFilter() {
             }`}
           />
         </div>
-        <div className={`${styles.options} ${newArrivalsClicked ? styles.close : ''}`}>
+        <div
+          className={`${styles.options} ${
+            newArrivalsClicked ? styles.close : ""
+          }`}
+        >
           <input type="checkbox" id="newArrivals" />
           <label htmlFor="newArrivals">New Arrivals</label>
         </div>

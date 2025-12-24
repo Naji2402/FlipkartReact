@@ -56,11 +56,18 @@ function PriceFilter() {
             </div>
             <div className={styles.minMaxPriceShow}>
                 <select>
-                    <option value="Min">Min</option>
+                    <option defaultValue="Min">Min</option>
+                    <option defaultValue="500">500</option>
+                    <option defaultValue="5000">1000</option>
+                    <option defaultValue="5000">2500</option>
+                    <option defaultValue="5000">5000+</option>
                 </select>
                 <p>to</p>
-                <select>
-                    <option value="Max">Max</option>
+                <select defaultValue="5000+">
+                    <option defaultValue="500">500</option>
+                    <option defaultValue="5000">1000</option>
+                    <option defaultValue="5000">2500</option>
+                    <option defaultValue="5000">5000+</option>
                 </select>
             </div>
           </div>

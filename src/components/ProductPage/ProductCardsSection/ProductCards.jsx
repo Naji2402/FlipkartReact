@@ -18,8 +18,7 @@ function ProductCards() {
     }
     getProducts();
   }, []);
-
-  
+   
 
   return (
     <>

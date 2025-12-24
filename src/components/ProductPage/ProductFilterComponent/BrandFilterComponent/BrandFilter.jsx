@@ -19,7 +19,7 @@ function BrandFilter() {
           <img
             src={arrow}
             className={`${styles.arrow} ${
-              brandClick ? styles.arrowRotate : ""
+              brandClick ? "" : styles.arrowRotate 
             }`}
             alt="arrow"
           />

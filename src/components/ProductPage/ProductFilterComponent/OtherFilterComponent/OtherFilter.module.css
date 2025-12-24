@@ -1,3 +1,4 @@
+
 .availabilityFilter{
     border-top: 1px solid #f0f0f0;
     padding: 16px;
@@ -31,11 +32,12 @@
 }
 
 .arrow{
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
+    width: 6px;
 }
 
 .arrowRotate{
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 .close{

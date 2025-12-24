@@ -7,7 +7,6 @@ function DiscountFilter() {
 
   function openSection() {
     setCRatingClicked(!cRatingClicked);
-    console.log("hello");
   }
   return (
     <>
