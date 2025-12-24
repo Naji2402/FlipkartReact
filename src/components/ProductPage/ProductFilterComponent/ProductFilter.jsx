@@ -8,6 +8,7 @@ import CustomerRatings from "./CustomerRatingsComponent/CustomerRatings.jsx";
 import DiscountFilter from "./DiscountFilterComponent/DiscountFilter.jsx";
 import assuredLogo from './ProductFilterAssets/FAssured.webp'
 import OtherFilter from "./OtherFilterComponent/OtherFilter.jsx";
+import footballFilterTopImage from './ProductFilterAssets/footballAdd.webp'
 
 function ProductFilter() {
   const [isClicked, setIsClicked] = useState(true);
@@ -24,6 +25,14 @@ function ProductFilter() {
   return (
     <>
       <div className={styles.filterSection}>
+        <div className={styles.addSection}>
+          <img src={footballFilterTopImage} className={styles.addImage} alt="football add image"/>
+          <div>
+            <h2>Footballs</h2>
+            <p>Nivia, Vector X, Cosco & more</p>
+          </div>
+          <div className={styles.addSectionUnderline}></div>
+        </div>
         <div className={styles.filterHeading}>
           <h1>Filters</h1>
         </div>

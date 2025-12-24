@@ -1,4 +1,3 @@
-import { React } from "react";
 import PDescription from "../../PDescriptionComponent/PDescription";
 import ProductCards from "../../ProductCardsSection/ProductCards";
 import ProductFilter from "../ProductFilter";

@@ -2,10 +2,8 @@ import PHeader from "../PHeaderComponent/PHeader";
 import FilterSort from "../FilterSortComponent/FilterSort";
 import FilterButtons from "../FilterButtonsComponent/FilterButtons";
 import PHeaderLarge from "../PHeaderLargeComponent/PHeaderLarge";
-// import PAddSection from "../PDescriptionComponent/PDescription";
-// import ProductCards from "../ProductCardsSection/ProductCards";
-// import ProductFilter from "../ProductFilterComponent/ProductFilter";
 import ProductAndFilterFinal from "../ProductFilterComponent/ProductAndFilterFinalComponent/ProductAndFilterFinal";
+import ProductPageFooter from "../ProductPageFooterComponent/ProductPageFooter";
 
  function PFinal(){
      return (
@@ -14,10 +12,8 @@ import ProductAndFilterFinal from "../ProductFilterComponent/ProductAndFilterFin
           <PHeaderLarge />
           <FilterSort />
           <FilterButtons />
-          {/* <PAddSection />
-          <ProductCards />
-          <ProductFilter /> */}
           <ProductAndFilterFinal />
+          <ProductPageFooter />
         </>
 )}
 
