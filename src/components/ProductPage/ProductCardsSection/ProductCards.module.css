@@ -155,6 +155,7 @@
     .productMain{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         border: none;
+        margin-top: 0;
     }
     .productCard{
         border-left: none;

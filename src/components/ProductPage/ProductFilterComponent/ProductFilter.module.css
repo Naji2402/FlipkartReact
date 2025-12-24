@@ -1,6 +1,7 @@
 .filterSection {
   background-color: white;
   width: 270px;
+  display: none;
 }
 .filterHeading {
   display: flex;
@@ -137,4 +138,11 @@
   font-size: 11px;
   color: #878787;
   font-family: Regular;
+}
+
+
+@media screen and (min-width: 1170px){
+  .filterSection{
+    display: block;
+  }
 }

@@ -16,6 +16,8 @@ function PAddSection() {
 
   return (
     <>
+    <div className={styles.pDesciptionMain}>
+
       <div className={styles.pagePath}>
         <p>Home</p>
         <img src={greyArrow} alt="" />
@@ -38,6 +40,7 @@ function PAddSection() {
         <h1>Football</h1>
         <p>{'(Showing 1-40 prducts of 5,160 products)'}</p>
       </div>
+    </div>
     </>
   );
 }
