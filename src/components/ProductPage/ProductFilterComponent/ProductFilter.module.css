@@ -142,15 +142,15 @@
 }
 
 .addSection div:nth-of-type(1) {
-  padding: 14px 16px;
+  padding: 12px 16px;
 }
 
 .addSection div h2 {
-  font-size: 16px;
+  font-size: 15px;
   color: #212121;
   font-family: SemiBold;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 19px;
 }
 .addSection div p {
   font-size: 11px;
@@ -159,6 +159,8 @@
   font-family: Regular;
   margin-top: 2px;
 }
+
+
 
 .addImage {
   width: 100%;

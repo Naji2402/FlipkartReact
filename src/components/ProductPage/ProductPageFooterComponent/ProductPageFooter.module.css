@@ -96,7 +96,10 @@
   font-family: Regular;
   line-height: 19px;
   color: white;
+  margin-top: 7px;
 }
+
+
 
 @media screen and (min-width: 1170px) {
   .footer {

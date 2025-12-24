@@ -1,14 +1,15 @@
 import styles from "./ProductPageFooter.module.css";
+import facebook from "./ProductPageFooterAssets/facebook.svg";
+import twitter from "./ProductPageFooterAssets/twitter.svg";
+import youtube from "./ProductPageFooterAssets/youtube.svg";
+import instagram from "./ProductPageFooterAssets/instagram.svg";
+import seller from "./ProductPageFooterAssets/seller.svg";
+import advertise from "./ProductPageFooterAssets/advertise.svg";
+import giftCards from "./ProductPageFooterAssets/giftcards.svg";
+import helpCenter from "./ProductPageFooterAssets/helpcenter.svg";
+import paymentMethods from "./ProductPageFooterAssets/paymentMethods.svg";
 
-import facebook from './ProductPageFooterAssets/facebook.svg';
-import twitter from './ProductPageFooterAssets/twitter.svg';
-import youtube from './ProductPageFooterAssets/youtube.svg';
-import instagram from './ProductPageFooterAssets/instagram.svg';
-import seller from './ProductPageFooterAssets/seller.svg';
-import advertise from './ProductPageFooterAssets/advertise.svg';
-import giftCards from './ProductPageFooterAssets/giftcards.svg';
-import helpCenter from './ProductPageFooterAssets/helpcenter.svg';
-import paymentMethods from './ProductPageFooterAssets/paymentMethods.svg';
+
 
 function ProductPageFooter() {
   return (
@@ -109,13 +110,13 @@ function ProductPageFooter() {
               <p>Karnataka, India</p>
             </div>
             <div className={styles.social}>
-                <h3>Social</h3>
-                <div>
-                    <img src={facebook} alt="facebook" />
-                    <img src={twitter} alt="twitter x" />
-                    <img src={youtube} alt="youtube" />
-                    <img src={instagram} alt="instagram" />
-                </div>
+              <h3>Social</h3>
+              <div>
+                <img src={facebook} alt="facebook" />
+                <img src={twitter} alt="twitter x" />
+                <img src={youtube} alt="youtube" />
+                <img src={instagram} alt="instagram" />
+              </div>
             </div>
           </div>
           <div className={styles.footerTopRightTwo}>
@@ -135,28 +136,28 @@ function ProductPageFooter() {
           </div>
         </div>
         <div className={styles.footerBottom}>
-            <div>
-                <img src={seller} alt="seller" />
-                <h2>Become a Seller</h2>
-            </div>
-            <div>
-                <img src={advertise} alt="advertise" />
-                <h2>Advertice</h2>
-            </div>
-            <div>
-                <img src={giftCards} alt="giftCards" />
-                <h2>Gift Cards</h2>
-            </div>
-            <div>
-                <img src={helpCenter} alt="help center" />
-                <h2>Help Center</h2>
-            </div>
-            <div>
-                <h2>© 2007-2025 Flipkart.com</h2>
-            </div>
-            <div>
-                <img src={paymentMethods} alt="paymentMethods" />
-            </div>
+          <div>
+            <img src={seller} alt="seller" />
+            <h2>Become a Seller</h2>
+          </div>
+          <div>
+            <img src={advertise} alt="advertise" />
+            <h2>Advertice</h2>
+          </div>
+          <div>
+            <img src={giftCards} alt="giftCards" />
+            <h2>Gift Cards</h2>
+          </div>
+          <div>
+            <img src={helpCenter} alt="help center" />
+            <h2>Help Center</h2>
+          </div>
+          <div>
+            <h2>© 2007-2025 Flipkart.com</h2>
+          </div>
+          <div>
+            <img src={paymentMethods} alt="paymentMethods" />
+          </div>
         </div>
       </footer>
     </>
