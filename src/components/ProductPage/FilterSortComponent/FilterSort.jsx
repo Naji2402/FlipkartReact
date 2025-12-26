@@ -1,6 +1,6 @@
 import Sort from "./FilterSortImages/sort.svg";
 import Filter from "./FilterSortImages/filter.svg";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import styles from "./FilterSort.module.css";
 import { useState } from "react";
@@ -34,13 +34,13 @@ function FilterSort() {
         </div>
         <div className={styles.middleLine}></div>
         <div className={styles.filterSort} onClick={categorySelected}>
-          <NavLink to="filter">
+          <Link to="filter">
           <div>
             <span>2</span>
             <img src={Filter} alt="filter lgot" className="filter" />
             <h2>Filter</h2>
           </div>
-          </NavLink>
+          </Link>
         </div>
       </div>
       <div className={`${styles.sortPopup} ${sortClicked ? styles.open : ''}`}>

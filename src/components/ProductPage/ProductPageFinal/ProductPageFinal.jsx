@@ -5,7 +5,6 @@ import PHeaderLarge from "../PHeaderLargeComponent/PHeaderLarge";
 import ProductAndFilterFinal from "../ProductFilterComponent/ProductAndFilterFinalComponent/ProductAndFilterFinal";
 import ProductPageFooter from "../ProductPageFooterComponent/ProductPageFooter";
 import ProductCategories from "../ProductCategoriesComponent/ProductCategories";
-import FilterCategories from "../FilterSortComponent/FilterCategoriesComponent/FilterCategories";
 import { Outlet } from "react-router-dom";
 
  function PFinal(){

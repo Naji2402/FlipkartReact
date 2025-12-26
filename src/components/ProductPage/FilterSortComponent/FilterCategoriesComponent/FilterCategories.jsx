@@ -1,28 +1,32 @@
+import { useState } from "react";
 import styles from "./FilterCategories.module.css";
-import arrow from '../FilterSortImages/leftArrow.svg'
+import arrow from "../FilterSortImages/leftArrow.svg";
 import { useNavigate } from "react-router-dom";
+import BrandFilterOptions from "./BrandFilterOptionsComponent/BrandFilterOptions";
 
 function FilterCategories() {
+  const [clicked, setClicked] = useState(true);
 
-    const naigate = useNavigate();
+  function categoryClicked() {
+    setClicked(!clicked)
+  }
+
+
+  const navigate = useNavigate();
 
   return (
     <>
-      <div
-        className={`${styles.filterPopup} `}
-      >
+      <div className={`${styles.filterPopup} `}>
         <div className={styles.filterPopupHeading}>
-          <div>
-            <img src={arrow} alt="arrow" onClick={() => naigate(-1)}/>
+          <div onClick={() => navigate(-1)} >
+            <img src={arrow} alt="arrow" />
             <h1>Filters</h1>
           </div>
           <span>Clear Filters</span>
         </div>
         <div className={styles.filterPopupMain}>
-          <div className={styles.filterPopupCategories}>
-            <div
-              className={`${styles.popupCategory} `}
-            >
+          <div className={styles.filterPopupCategories} onClick={categoryClicked}>
+            <div className={`${styles.popupCategory} ${clicked ? styles.clicked : ''} `}>
               <p>Brand</p>
             </div>
             <div className={styles.popupCategory}>
@@ -53,14 +57,16 @@ function FilterCategories() {
               <p>Category</p>
             </div>
           </div>
-          <div className={styles.filterPopupOptions}></div>
+          <div className={styles.filterPopupOptions}>
+            {clicked ? <BrandFilterOptions /> : ''}
+          </div>
         </div>
         <div className={styles.filterPopupBottom}>
           <div>
             <h3>6,151</h3>
             <p>products found</p>
           </div>
-          <button>Apply</button>
+          <button onClick={() => navigate(-1)}>Apply</button>
         </div>
       </div>
     </>
