@@ -1,4 +1,5 @@
 import Final from "./components/FinalComponent/Final"
+import FilterCategories from "./components/ProductPage/FilterSortComponent/FilterCategoriesComponent/FilterCategories.jsx"
 import PFinal from "./components/ProductPage/ProductPageFinal/ProductPageFinal"
 import { Routes, Route} from 'react-router-dom'
 
@@ -7,7 +8,9 @@ function App() {
     <>
         <Routes>
             <Route path='/' element={<Final />} />
-            <Route path='productPage' element={<PFinal />} />
+            <Route path='productPage' element={<PFinal />}>
+              <Route path="filter" element={<FilterCategories />} />
+            </Route>
         </Routes>
     </>
   )

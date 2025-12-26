@@ -1,15 +1,27 @@
 import Sort from "./FilterSortImages/sort.svg";
 import Filter from "./FilterSortImages/filter.svg";
+import { NavLink } from "react-router-dom";
+
 import styles from "./FilterSort.module.css";
 import { useState } from "react";
 
+
+
 function FilterSort() {
 
-    const [clicked, setClicked] = useState(false);
+    const [sortClicked, setSortClicked] = useState(false);
+    const [categorySelect, setCategorySelect] = useState(false)
 
     function click() {
-        setClicked(!clicked)
+        setSortClicked(!sortClicked)
     }
+
+
+    function categorySelected() {
+      setCategorySelect(!categorySelect)
+    }
+
+    
 
   return (
     <>
@@ -21,15 +33,17 @@ function FilterSort() {
           </div>
         </div>
         <div className={styles.middleLine}></div>
-        <div className={styles.filterSort}>
+        <div className={styles.filterSort} onClick={categorySelected}>
+          <NavLink to="filter">
           <div>
             <span>2</span>
             <img src={Filter} alt="filter lgot" className="filter" />
             <h2>Filter</h2>
           </div>
+          </NavLink>
         </div>
       </div>
-      <div className={`${styles.sortPopup} ${clicked ? styles.open : ''}`}>
+      <div className={`${styles.sortPopup} ${sortClicked ? styles.open : ''}`}>
         <div className={styles.sortPopupHeading}>
           <h2>SORT BY</h2>
         </div>
