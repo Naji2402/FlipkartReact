@@ -1,5 +1,4 @@
 .filterPopup {
-  
   position: fixed;
   top: 0;
   left: 0;
@@ -72,7 +71,6 @@
   flex: 2;
 }
 
-
 .filterPopupBottom {
   display: flex;
   justify-content: space-between;
@@ -105,60 +103,64 @@
   font-weight: 400;
 }
 
-.clicked{
-    background-color: white;
+.clicked {
+  background-color: white;
 }
 
-.searchSection{
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 7px 16px;
+.searchSection {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 7px 16px;
 }
 
-.searchSection input{
-    height: 40px;
-    padding-left: 40px;
-    flex: 1;
-    font-size: 12px;
-    font-weight: 400;
-    font-family: Roboto;
-    border: 1px solid #9b9b9b41;
+.searchSection input {
+  height: 40px;
+  padding-left: 40px;
+  flex: 1;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Roboto;
+  border: 1px solid #9b9b9b41;
 }
 
-.searchSection input::placeholder{
-    color: #9b9b9b;
+.searchSection input::placeholder {
+  color: #9b9b9b;
 }
 
-.searchSection input:focus{
-    outline: none;
+.searchSection input:focus {
+  outline: none;
 }
 
-.searchSection img{
-    position: absolute;
-    left: 13px;
-    top: 12px;
+.searchSection img {
+  position: absolute;
+  left: 13px;
+  top: 12px;
 }
 
-.brandOption{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 12px 19px 18px;
-    gap: 19px;
+.brandOption, .ratingOption, .priceOptions {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 19px 18px;
+  gap: 19px;
 }
 
-.brandOption input{
-    width: 18px;
-    height: 18px;
-    border:2px solid black;
-    border-radius: 2px;
+.brandOption input, .ratingOption input, .priceOptions input  {
+  width: 18px;
+  height: 18px;
+  border: 2px solid black;
+  border-radius: 2px;
 }
 
+.brandOption label, .ratingOption label, .priceOptions label {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
 
-.brandOption label{
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
+.ratingOption{
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
