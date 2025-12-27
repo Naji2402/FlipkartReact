@@ -138,7 +138,7 @@
   top: 12px;
 }
 
-.brandOption, .ratingOption, .priceOptions {
+.checkBox {
   display: flex;
   align-items: center;
   width: 100%;
@@ -146,21 +146,15 @@
   gap: 19px;
 }
 
-.brandOption input, .ratingOption input, .priceOptions input  {
+.checkBox input {
   width: 18px;
   height: 18px;
   border: 2px solid black;
   border-radius: 2px;
 }
 
-.brandOption label, .ratingOption label, .priceOptions label {
+.checkBox label {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
 }
-
-.ratingOption{
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-

@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./FilterCategories.module.css";
 import arrow from "../FilterSortImages/leftArrow.svg";
-import { useNavigate } from "react-router-dom";
 import BrandFilterOptions from "./BrandFilterOptionsComponent/BrandFilterOptions";
 import CRatingsFilterOptions from "./CRatingsFilterOptionsComponent/CRatingsFilterOptions";
 import PriceFilterOptions from "./PriceFilterOptionsComponent/PriceFilterOptions";
+import DiscountFilterOptions from "./DiscountFilterOptionsComponent/DiscountFilterOptions";
+import FAssuredFilterOption from "./FAssuredFilterComponent/FAssuredFilterOption";
 
 function FilterCategories() {
   const [active, setActive] = useState("Brand");
@@ -19,6 +21,34 @@ function FilterCategories() {
 
   function priceClick() {
     setActive("price");
+  }
+
+  function discountClick() {
+    setActive("discount");
+  }
+
+  function assuredClick() {
+    setActive("assured");
+  }
+
+  function offerClick() {
+    setActive("offers");
+  }
+
+  function availabilityClick() {
+    setActive("availability");
+  }
+
+  function gstInvoiceClick() {
+    setActive("gstInvoice");
+  }
+
+  function newArrivalsClick() {
+    setActive("newArrivals");
+  }
+
+  function categoryClick() {
+    setActive("category");
   }
 
   const navigate = useNavigate();
@@ -59,25 +89,60 @@ function FilterCategories() {
             >
               <p>Price</p>
             </div>
-            <div className={styles.popupCategory}>
+            <div
+              className={`${styles.popupCategory} ${
+                active === "discount" ? styles.clicked : ""
+              } `}
+              onClick={discountClick}
+            >
               <p>Discount</p>
             </div>
-            <div className={styles.popupCategory}>
+            <div
+              className={`${styles.popupCategory} ${
+                active === "assured" ? styles.clicked : ""
+              } `}
+              onClick={assuredClick}
+            >
               <p>F-Assured</p>
             </div>
-            <div className={styles.popupCategory}>
+            <div
+              className={`${styles.popupCategory} ${
+                active === "offers" ? styles.clicked : ""
+              } `}
+              onClick={offerClick}
+            >
               <p>Offers</p>
             </div>
-            <div className={styles.popupCategory}>
+            <div
+              className={`${styles.popupCategory} ${
+                active === "availability" ? styles.clicked : ""
+              } `}
+              onClick={availabilityClick}
+            >
               <p>Availability</p>
             </div>
-            <div className={styles.popupCategory}>
+            <div
+              className={`${styles.popupCategory} ${
+                active === "gstInvoice" ? styles.clicked : ""
+              } `}
+              onClick={gstInvoiceClick}
+            >
               <p>GST Invoice Available</p>
             </div>
-            <div className={styles.popupCategory}>
+            <div
+              className={`${styles.popupCategory} ${
+                active === "newArrivals" ? styles.clicked : ""
+              } `}
+              onClick={newArrivalsClick}
+            >
               <p>New Arrivals</p>
             </div>
-            <div className={styles.popupCategory}>
+            <div
+              className={`${styles.popupCategory} ${
+                active === "category" ? styles.clicked : ""
+              } `}
+              onClick={categoryClick}
+            >
               <p>Category</p>
             </div>
           </div>
@@ -85,6 +150,8 @@ function FilterCategories() {
             {active === "Brand" ? <BrandFilterOptions /> : ""}
             {active === "rating" ? <CRatingsFilterOptions /> : ""}
             {active === "price" ? <PriceFilterOptions /> : ""}
+            {active === "discount" ? <DiscountFilterOptions /> : ""}
+            {active === "assured" ? <FAssuredFilterOption /> : ""}
           </div>
         </div>
         <div className={styles.filterPopupBottom}>

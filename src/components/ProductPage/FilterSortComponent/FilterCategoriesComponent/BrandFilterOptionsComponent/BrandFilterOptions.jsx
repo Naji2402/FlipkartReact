@@ -1,7 +1,6 @@
-import { React } from "react";
 import styles from "../FilterCategories.module.css";
 import search from "../../FilterSortImages/SearchIcon.svg";
-import BrandOption from "./BrandOption";
+import CheckBox from "../CheckBox";
 
 function BrandFilterOptions() {
   return (
@@ -12,21 +11,21 @@ function BrandFilterOptions() {
           <input type="search" placeholder="Search Brand" />
         </div>
         <div className={styles.brandOptions}>
-            <BrandOption name="NIVIA" />
-            <BrandOption name="COSCO" />
-            <BrandOption name="VECTOR X" />
-            <BrandOption name="RASCO" />
-            <BrandOption name="PUMA" />
-            <BrandOption name="MAYOR" />
-            <BrandOption name="MATTZIG" />
-            <BrandOption name="DENOVO" />
-            <BrandOption name="Dinetic" />
-            <BrandOption name="ULTIMATE GOAL" />
-            <BrandOption name="DIBACO SPORTS" />
-            <BrandOption name="BOLDUP" />
-            <BrandOption name="YMD" />
-            <BrandOption name="NICE" />
-            <BrandOption name="gamers hub" />
+          <CheckBox name="NIVIA" />
+          <CheckBox name="COSCO" />
+          <CheckBox name="VECTOR X" />
+          <CheckBox name="RASCO" />
+          <CheckBox name="PUMA" />
+          <CheckBox name="MAYOR" />
+          <CheckBox name="MATTZIG" />
+          <CheckBox name="DENOVO" />
+          <CheckBox name="Dinetic" />
+          <CheckBox name="ULTIMATE GOAL" />
+          <CheckBox name="DIBACO SPORTS" />
+          <CheckBox name="BOLDUP" />
+          <CheckBox name="YMD" />
+          <CheckBox name="NICE" />
+          <CheckBox name="gamers hub" />
         </div>
       </div>
     </>
