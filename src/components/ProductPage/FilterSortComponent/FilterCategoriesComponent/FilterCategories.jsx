@@ -7,8 +7,14 @@ import CRatingsFilterOptions from "./CRatingsFilterOptionsComponent/CRatingsFilt
 import PriceFilterOptions from "./PriceFilterOptionsComponent/PriceFilterOptions";
 import DiscountFilterOptions from "./DiscountFilterOptionsComponent/DiscountFilterOptions";
 import FAssuredFilterOption from "./FAssuredFilterComponent/FAssuredFilterOption";
+import OffersFilterOptions from "./OffersFilterOptionsComponent/OffersFilterOptions";
+import AvailabilityFilterOptions from "./AvailabilityFilterOptionsComponent/AvailabilityFilterOptions";
+import GstIAvailableFilterOptions from "./GstIAvailableFilterOptionsComponent/GstIAvailableFilterOptions";
+import NewArrivalsFilterOptions from "./NewArrivalsFilterOptionsComponent/NewArrivalsFilterOptions";
 
 function FilterCategories() {
+  const navigate = useNavigate();
+
   const [active, setActive] = useState("Brand");
 
   function brandsClick() {
@@ -51,7 +57,7 @@ function FilterCategories() {
     setActive("category");
   }
 
-  const navigate = useNavigate();
+  
 
   return (
     <>
@@ -147,17 +153,23 @@ function FilterCategories() {
             </div>
           </div>
           <div className={styles.filterPopupOptions}>
+
             {active === "Brand" ? <BrandFilterOptions /> : ""}
             {active === "rating" ? <CRatingsFilterOptions /> : ""}
             {active === "price" ? <PriceFilterOptions /> : ""}
             {active === "discount" ? <DiscountFilterOptions /> : ""}
             {active === "assured" ? <FAssuredFilterOption /> : ""}
+            {active === "offers" ? <OffersFilterOptions /> : ""}
+            {active === "availability" ? <AvailabilityFilterOptions /> : ""}
+            {active === "gstInvoice" ? <GstIAvailableFilterOptions /> : ""}
+            {active === "newArrivals" ? <NewArrivalsFilterOptions /> : ""}
+            
           </div>
         </div>
         <div className={styles.filterPopupBottom}>
           <div>
             <h3>6,151</h3>
-            <p>products found</p>
+            <p>products found </p>
           </div>
           <button onClick={() => navigate(-1)}>Apply</button>
         </div>

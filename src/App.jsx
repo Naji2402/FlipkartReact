@@ -1,3 +1,4 @@
+import Error from "./components/ErrorComponent/Error.jsx"
 import Final from "./components/FinalComponent/Final"
 import FilterCategories from "./components/ProductPage/FilterSortComponent/FilterCategoriesComponent/FilterCategories.jsx"
 import PFinal from "./components/ProductPage/ProductPageFinal/ProductPageFinal"
@@ -11,6 +12,7 @@ function App() {
             <Route path='productPage' element={<PFinal />}>
               <Route path="filter" element={<FilterCategories />} />
             </Route>
+            <Route path="*" element={<Error />}/>
         </Routes>
     </>
   )
