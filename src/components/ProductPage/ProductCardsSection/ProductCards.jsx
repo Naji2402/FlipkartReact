@@ -19,10 +19,12 @@ function ProductCards() {
       }
     }
     getProducts();
-  }, []);
+  }, [sortInputValue]);
 
   const sortFilteredFinal = [...products].sort((a, b) => {
     switch (sortInputValue) {
+      case "":
+        return b.isBestSeller - a.isBestSeller;
       case "LowToHigh":
         return a.price - b.price;
       case "HighToLow":

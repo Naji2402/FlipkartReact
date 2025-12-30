@@ -8,7 +8,7 @@ import ProductCategories from "../ProductCategoriesComponent/ProductCategories";
 import { Outlet } from "react-router-dom";
 import { createContext, useState } from "react";
 
-export const sortValueContext = createContext(null);
+export const sortValueContext = createContext();
 
 function PFinal() {
   const [sortInputValue, setSortInputValue] = useState("");

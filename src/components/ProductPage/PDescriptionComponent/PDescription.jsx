@@ -1,6 +1,7 @@
 import styles from "./PDescription.module.css";
 import { useState } from "react";
 import greyArrow from './PDescriptionAssets/greyArrow.svg'
+import LargeSort from "../LargeSortComponent/LargeSort";
 
 function PAddSection() {
   const [isCLicked, setIsClicked] = useState(false);
@@ -40,6 +41,7 @@ function PAddSection() {
         <h1>Football</h1>
         <p>{'(Showing 1-40 prducts of 5,160 products)'}</p>
       </div>
+      <LargeSort />
     </div>
     </>
   );

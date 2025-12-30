@@ -8,7 +8,6 @@ import { sortValueContext } from "../ProductPageFinal/ProductPageFinal";
 function FilterSort() {
   const [sortClicked, setSortClicked] = useState(false);
   const [categorySelect, setCategorySelect] = useState(false);
-  // const [sortInputValue, setSortInputValue] = useState("");
   const { sortInputValue, setSortInputValue } = useContext(sortValueContext);
 
   function click() {
@@ -23,6 +22,8 @@ function FilterSort() {
     setSortInputValue(e.target.value);
     setSortClicked(!sortClicked);
   }
+
+  
 
   return (
     <>
@@ -56,6 +57,7 @@ function FilterSort() {
               id="popularity"
               name="sort"
               value="popularity"
+              defaultChecked
               onChange={inputChecked}
             />
           </div>
