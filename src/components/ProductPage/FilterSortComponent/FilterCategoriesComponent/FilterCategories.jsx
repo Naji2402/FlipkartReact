@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./FilterCategories.module.css";
 import arrow from "../FilterSortImages/leftArrow.svg";
@@ -11,6 +11,8 @@ import OffersFilterOptions from "./OffersFilterOptionsComponent/OffersFilterOpti
 import AvailabilityFilterOptions from "./AvailabilityFilterOptionsComponent/AvailabilityFilterOptions";
 import GstIAvailableFilterOptions from "./GstIAvailableFilterOptionsComponent/GstIAvailableFilterOptions";
 import NewArrivalsFilterOptions from "./NewArrivalsFilterOptionsComponent/NewArrivalsFilterOptions";
+
+
 
 function FilterCategories() {
   const navigate = useNavigate();
@@ -56,8 +58,6 @@ function FilterCategories() {
   function categoryClick() {
     setActive("category");
   }
-
-  
 
   return (
     <>
@@ -153,7 +153,7 @@ function FilterCategories() {
             </div>
           </div>
           <div className={styles.filterPopupOptions}>
-
+            
             {active === "Brand" ? <BrandFilterOptions /> : ""}
             {active === "rating" ? <CRatingsFilterOptions /> : ""}
             {active === "price" ? <PriceFilterOptions /> : ""}
@@ -163,7 +163,7 @@ function FilterCategories() {
             {active === "availability" ? <AvailabilityFilterOptions /> : ""}
             {active === "gstInvoice" ? <GstIAvailableFilterOptions /> : ""}
             {active === "newArrivals" ? <NewArrivalsFilterOptions /> : ""}
-            
+
           </div>
         </div>
         <div className={styles.filterPopupBottom}>

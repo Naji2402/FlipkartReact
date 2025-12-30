@@ -6,20 +6,27 @@ import ProductAndFilterFinal from "../ProductFilterComponent/ProductAndFilterFin
 import ProductPageFooter from "../ProductPageFooterComponent/ProductPageFooter";
 import ProductCategories from "../ProductCategoriesComponent/ProductCategories";
 import { Outlet } from "react-router-dom";
+import { createContext, useState } from "react";
 
- function PFinal(){
-     return (
-        <>
-          <PHeader />  
-          <PHeaderLarge />
-          <FilterSort />
-          <FilterButtons />
-          <ProductCategories />
-          <ProductAndFilterFinal />
-          <ProductPageFooter />
-          <Outlet />
-        </>
-)}
+export const sortValueContext = createContext(null);
 
+function PFinal() {
+  const [sortInputValue, setSortInputValue] = useState("");
 
- export default PFinal;
+  return (
+    <>
+      <sortValueContext.Provider value={{ sortInputValue, setSortInputValue }}>
+        <PHeader />
+        <PHeaderLarge />
+        <FilterSort />
+        <FilterButtons />
+        <ProductCategories />
+        <ProductAndFilterFinal />
+        <ProductPageFooter />
+        <Outlet />
+      </sortValueContext.Provider>
+    </>
+  );
+}
+
+export default PFinal;
