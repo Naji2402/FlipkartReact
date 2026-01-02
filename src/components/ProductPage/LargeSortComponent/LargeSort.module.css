@@ -21,14 +21,15 @@
 .sortOptions {
   margin: 0 10px;
   padding-bottom: 4px;
+  cursor: pointer;
 }
-
-.sortOptions span {
-  /* color: #2874f0; */
-}
-
-.clicked {
+.clickedOption {
   border-bottom: 2px solid #2874f0;
+}
+.clickedOptionText {
+  color: #2874f0;
+  font-weight: 500;
+  font-family: SemiBold;
 }
 
 @media screen and (min-width: 1170px) {

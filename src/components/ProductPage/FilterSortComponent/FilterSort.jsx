@@ -23,7 +23,6 @@ function FilterSort() {
     setSortClicked(!sortClicked);
   }
 
-  
 
   return (
     <>
@@ -98,3 +97,4 @@ function FilterSort() {
 }
 
 export default FilterSort;
+
