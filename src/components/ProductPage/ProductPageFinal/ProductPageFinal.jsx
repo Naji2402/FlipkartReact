@@ -11,6 +11,8 @@ import { createContext, useState } from "react";
 export const sortValueContext = createContext();
 export const filterValueContext = createContext();
 
+  
+
 function PFinal() {
   const [sortInputValue, setSortInputValue] = useState("");
   const [filterInputValue, setFilterInputValue] = useState([]);
@@ -18,7 +20,8 @@ function PFinal() {
   return (
     <>
       <sortValueContext.Provider value={{ sortInputValue, setSortInputValue }}>
-        <filterValueContext.Provider value={{ filterInputValue, setFilterInputValue }}
+        <filterValueContext.Provider
+          value={{ filterInputValue, setFilterInputValue }}
         >
           <PHeader />
           <PHeaderLarge />

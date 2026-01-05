@@ -7,7 +7,6 @@ import { filterValueContext } from "../ProductPageFinal/ProductPageFinal.jsx";
 
 function ProductCards() {
   const [products, setProducts] = useState([]);
-  // const [finalProducts, setFinalProducts] = useState();
   const { sortInputValue, setSortInputValue } = useContext(sortValueContext);
   const { filterInputValue, setFilterInputValue } =
     useContext(filterValueContext);
@@ -46,8 +45,10 @@ function ProductCards() {
     return filterInputValue.includes(product.brandName);
   });
 
-  let finalProductList =
+  const finalProductList =
     filterInputValue.length === 0 ? sortFilteredFinal : filteredFinal;
+
+  
 
   return (
     <>

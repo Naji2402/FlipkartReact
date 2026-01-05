@@ -1,13 +1,6 @@
 import styles from "./FilterCategories.module.css";
-import { useContext } from "react";
-import { filterValueContext } from "../../ProductPageFinal/ProductPageFinal";
 
 function CheckBox(props) {
-  // const {filterInputValue, setFilterInputValue} = useContext(filterValueContext);
-  // console.log(filterInputValue);
-  
-  
-
   return (
     <>
       <div className={styles.checkBox}>

@@ -20,6 +20,8 @@ function BrandFilterOptions() {
     }
   }
 
+  
+
   return (
     <>
       <div className={styles.brandFilterOptions}>
