@@ -9,8 +9,15 @@ function BrandFilterOptions() {
     useContext(filterValueContext);
 
   function filterValue(e) {
-    const newValue = e.currentTarget.value;
-    setFilterInputValue((prev) => [...prev, newValue]);
+    let newValue;
+    if (e.currentTarget.checked) {
+      newValue = e.currentTarget.value;
+      setFilterInputValue((prev) => [...prev, newValue]);
+    } else {
+      setFilterInputValue((prev) =>
+        prev.filter((val) => val != e.currentTarget.value)
+      );
+    }
   }
 
   return (
