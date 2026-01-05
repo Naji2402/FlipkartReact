@@ -12,6 +12,8 @@ function LargeSort() {
     setClickedValue(e.currentTarget.dataset.sortValue);
   }
 
+  
+
   return (
     <>
       <div className={styles.sortMain}>

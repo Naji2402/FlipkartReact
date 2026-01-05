@@ -9,21 +9,26 @@ import { Outlet } from "react-router-dom";
 import { createContext, useState } from "react";
 
 export const sortValueContext = createContext();
+export const filterValueContext = createContext();
 
 function PFinal() {
   const [sortInputValue, setSortInputValue] = useState("");
+  const [filterInputValue, setFilterInputValue] = useState([]);
 
   return (
     <>
       <sortValueContext.Provider value={{ sortInputValue, setSortInputValue }}>
-        <PHeader />
-        <PHeaderLarge />
-        <FilterSort />
-        <FilterButtons />
-        <ProductCategories />
-        <ProductAndFilterFinal />
-        <ProductPageFooter />
-        <Outlet />
+        <filterValueContext.Provider value={{ filterInputValue, setFilterInputValue }}
+        >
+          <PHeader />
+          <PHeaderLarge />
+          <FilterSort />
+          <FilterButtons />
+          <ProductCategories />
+          <ProductAndFilterFinal />
+          <ProductPageFooter />
+          <Outlet />
+        </filterValueContext.Provider>
       </sortValueContext.Provider>
     </>
   );

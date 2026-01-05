@@ -3,10 +3,14 @@ import styles from "./ProductCards.module.css";
 import ProductCard from "./ProductCard.jsx";
 import { useContext } from "react";
 import { sortValueContext } from "../ProductPageFinal/ProductPageFinal.jsx";
+import { filterValueContext } from "../ProductPageFinal/ProductPageFinal.jsx";
 
 function ProductCards() {
   const [products, setProducts] = useState([]);
+  // const [finalProducts, setFinalProducts] = useState();
   const { sortInputValue, setSortInputValue } = useContext(sortValueContext);
+  const { filterInputValue, setFilterInputValue } =
+    useContext(filterValueContext);
 
   useEffect(() => {
     async function getProducts() {
@@ -19,9 +23,9 @@ function ProductCards() {
       }
     }
     getProducts();
-  }, [sortInputValue]);
+  }, [sortInputValue, filterInputValue]);
 
-  const sortFilteredFinal = [...products].sort((a, b) => {
+  const sortFilteredFinal = products.sort((a, b) => {
     switch (sortInputValue) {
       case "":
         return b.isBestSeller - a.isBestSeller;
@@ -38,14 +42,22 @@ function ProductCards() {
     }
   });
 
+  const filteredFinal = sortFilteredFinal.filter((product) => {
+    return filterInputValue.includes(product.brandName);
+  });
+
+  let finalProductList =
+    filterInputValue.length === 0 ? sortFilteredFinal : filteredFinal;
+
   return (
     <>
       <div className={styles.productMain}>
-        {sortFilteredFinal.map((product) => {
+        {finalProductList.map((product) => {
           return (
             <ProductCard
               key={product.id}
               name={product.name}
+              brandName={product.brandName}
               price={product.price}
               realPrice={product.realPrice}
               discountPercentage={product.discountPerc}
