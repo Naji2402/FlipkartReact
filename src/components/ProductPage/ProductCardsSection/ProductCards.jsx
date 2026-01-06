@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styles from "./ProductCards.module.css";
 import ProductCard from "./ProductCard.jsx";
 import { useContext } from "react";
-
 import { sortValueContext } from "../../../App.jsx";
 import { brandFilterValueContext } from "../../../App.jsx";
 import { priceFilterValueContext } from "../../../App.jsx";
@@ -51,10 +50,30 @@ function ProductCards() {
     return brandFilterInputValue.includes(product.brandName);
   });
 
-  const finalProductList =
+  const productList =
     brandFilterInputValue.length === 0 ? sortFilteredFinal : brandFilteredFinal;
 
-  
+  const priceFilteredFinal = productList.filter((product) => {
+    switch(priceFilterInputValue){
+      case 500:
+        return product.price < 500;
+        break;
+      case 1000:
+        return product.price >= 501 && product.price <=1000
+        break;
+      case 2500:
+        return product.price >= 1001 && product.price <=2500
+        break;
+      case 2501:
+        return product.price > 2500
+      default:
+        return product
+    }
+  })
+
+
+
+  const finalProductList = priceFilteredFinal;
 
   return (
     <>
@@ -80,3 +99,5 @@ function ProductCards() {
 }
 
 export default ProductCards;
+
+// 6 1 10 9 12

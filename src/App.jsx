@@ -12,7 +12,8 @@ export const priceFilterValueContext = createContext();
 function App() {
   const [sortInputValue, setSortInputValue] = useState("");
   const [brandFilterInputValue, setBrandFilterInputValue] = useState([]);
-  const [priceFilterInputValue, setPriceFilterInputValue] = useState([]);
+  // const [priceFilterInputValue, setPriceFilterInputValue] = useState([]);
+  const [priceFilterInputValue, setPriceFilterInputValue] = useState();
   return (
     <>
       <sortValueContext.Provider value={{ sortInputValue, setSortInputValue }}>

@@ -8,16 +8,24 @@ function PriceFilterOptions() {
     priceFilterValueContext
   );
 
+  // function priceFilter(e) {
+  //   let newPriceValue;
+  //   if (e.currentTarget.checked) {
+  //     newPriceValue = e.currentTarget.value;
+  //     setPriceFilterInputValue((prev) => [...prev, newPriceValue]);
+  //   } else {
+  //     newPriceValue = e.currentTarget.value;
+  //     setPriceFilterInputValue((prev) =>
+  //       prev.filter((val) => val != newPriceValue)
+  //     );
+  //   }
+  // }
+
   function priceFilter(e) {
     let newPriceValue;
     if (e.currentTarget.checked) {
-      newPriceValue = e.currentTarget.value;
-      setPriceFilterInputValue((prev) => [...prev, newPriceValue]);
-    } else {
-      newPriceValue = e.currentTarget.value;
-      setPriceFilterInputValue((prev) =>
-        prev.filter((val) => val != newPriceValue)
-      );
+      newPriceValue = Number(e.currentTarget.value);
+      setPriceFilterInputValue(newPriceValue)
     }
   }
 
@@ -27,22 +35,22 @@ function PriceFilterOptions() {
       <div>
         <CheckBox
           name="Rs. 500 and Below"
-          value=" 500 "
+          value= {500} 
           onChange={priceFilter}
         />
         <CheckBox
           name="Rs. 501 - Rs. 1000"
-          value=" 501 - 1000"
+          value={1000}
           onChange={priceFilter}
         />
         <CheckBox
           name="Rs. 1001 - Rs. 2500"
-          value=" 1001 - 2500 "
+          value={2500}
           onChange={priceFilter}
         />
         <CheckBox
-          name="Rs. 5001 - Rs. Above"
-          value=" 5001 "
+          name="Rs. 2501 - Rs. Above"
+          value={2501}
           onChange={priceFilter}
         />
       </div>

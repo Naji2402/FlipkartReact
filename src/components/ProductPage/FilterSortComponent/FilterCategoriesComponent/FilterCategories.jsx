@@ -12,11 +12,13 @@ import AvailabilityFilterOptions from "./AvailabilityFilterOptionsComponent/Avai
 import GstIAvailableFilterOptions from "./GstIAvailableFilterOptionsComponent/GstIAvailableFilterOptions";
 import NewArrivalsFilterOptions from "./NewArrivalsFilterOptionsComponent/NewArrivalsFilterOptions";
 import { brandFilterValueContext } from "../../../../App";
+import { priceFilterValueContext } from "../../../../App";
 
 function FilterCategories() {
   const navigate = useNavigate();
   const { brandFilterInputValue, setBrandFilterInputValue } =
     useContext(brandFilterValueContext);
+  const {priceFileterInputValue, setPriceFilterInputValue} = useContext(priceFilterValueContext);
 
   const [active, setActive] = useState("Brand");
 
@@ -62,6 +64,7 @@ function FilterCategories() {
 
   useEffect(() => {
     setBrandFilterInputValue([])
+    setPriceFilterInputValue('');
   }, []);
 
   return (
