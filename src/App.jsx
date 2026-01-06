@@ -9,12 +9,14 @@ export const sortValueContext = createContext();
 export const brandFilterValueContext = createContext();
 export const priceFilterValueContext = createContext();
 export const ratingFilterValueContext = createContext();
+export const discountFilterValueContext = createContext();
 
 function App() {
   const [sortInputValue, setSortInputValue] = useState("");
   const [brandFilterInputValue, setBrandFilterInputValue] = useState([]);
   const [priceFilterInputValue, setPriceFilterInputValue] = useState();
   const [ratingFilterInputValue, setRatingFilterInputValue] = useState();
+  const [discountFilterInputValue, setDiscountFilterInputValue] = useState();
 
   return (
     <>
@@ -25,14 +27,23 @@ function App() {
           <priceFilterValueContext.Provider
             value={{ priceFilterInputValue, setPriceFilterInputValue }}
           >
-            <ratingFilterValueContext.Provider value={{ratingFilterInputValue, setRatingFilterInputValue}}>
-            <Routes>
-              <Route path="/" element={<Final />} />
-              <Route path="productPage" element={<PFinal />}>
-                <Route path="filter" element={<FilterCategories />} />
-              </Route>
-              <Route path="*" element={<Error />} />
-            </Routes>
+            <ratingFilterValueContext.Provider
+              value={{ ratingFilterInputValue, setRatingFilterInputValue }}
+            >
+              <discountFilterValueContext.Provider
+                value={{
+                  discountFilterInputValue,
+                  setDiscountFilterInputValue,
+                }}
+              >
+                <Routes>
+                  <Route path="/" element={<Final />} />
+                  <Route path="productPage" element={<PFinal />}>
+                    <Route path="filter" element={<FilterCategories />} />
+                  </Route>
+                  <Route path="*" element={<Error />} />
+                </Routes>
+              </discountFilterValueContext.Provider>
             </ratingFilterValueContext.Provider>
           </priceFilterValueContext.Provider>
         </brandFilterValueContext.Provider>

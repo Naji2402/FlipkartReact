@@ -14,13 +14,15 @@ import NewArrivalsFilterOptions from "./NewArrivalsFilterOptionsComponent/NewArr
 import { brandFilterValueContext } from "../../../../App";
 import { priceFilterValueContext } from "../../../../App";
 import { ratingFilterValueContext } from "../../../../App";
+import { discountFilterValueContext } from "../../../../App";
 
 function FilterCategories() {
   const navigate = useNavigate();
   const { brandFilterInputValue, setBrandFilterInputValue } =
     useContext(brandFilterValueContext);
   const {priceFilterInputValue, setPriceFilterInputValue} = useContext(priceFilterValueContext);
-  const {ratingFilterInputValue, setRatingFilterInputValue} = useContext(ratingFilterValueContext)
+  const {ratingFilterInputValue, setRatingFilterInputValue} = useContext(ratingFilterValueContext);
+  const {discountFilterInputValue, setDiscountFilterInputValue} = useContext(discountFilterValueContext)
 
   const [active, setActive] = useState("Brand");
 
@@ -68,6 +70,7 @@ function FilterCategories() {
     setBrandFilterInputValue([])
     setPriceFilterInputValue('');
     setRatingFilterInputValue('');
+    setDiscountFilterInputValue('')
   }, []);
 
   return (

@@ -6,6 +6,7 @@ import { sortValueContext } from "../../../App.jsx";
 import { brandFilterValueContext } from "../../../App.jsx";
 import { priceFilterValueContext } from "../../../App.jsx";
 import { ratingFilterValueContext } from "../../../App.jsx";
+import { discountFilterValueContext } from "../../../App.jsx";
 
 function ProductCards() {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,10 @@ function ProductCards() {
 
   const { ratingFilterInputValue, setRatingFilterInputValue } = useContext(
     ratingFilterValueContext
+  );
+
+  const { discountFilterInputValue, setDiscountFilterInputValue } = useContext(
+    discountFilterValueContext
   );
 
   useEffect(() => {
@@ -79,25 +84,45 @@ function ProductCards() {
   const ratingFilteredFinal = priceFilteredFinal.filter((product) => {
     switch (ratingFilterInputValue) {
       case 4:
-        return product.rating >= 4;
+        return product.rating >= ratingFilterInputValue;
         break;
       case 3:
-        return product.rating >= 3;
+        return product.rating >= ratingFilterInputValue;
         break;
       case 2:
-        return product.rating >= 2;
+        return product.rating >= ratingFilterInputValue;
         break;
       case 1:
-        return product.rating >= 1;
+        return product.rating >= ratingFilterInputValue;
         break;
       default:
         return product;
     }
   });
 
-  
+  const discountFilteredFinal = ratingFilteredFinal.filter((product) => {
+    switch (discountFilterInputValue) {
+      case 70:
+        return product.discountPerc >= discountFilterInputValue;
+        break;
+      case 60:
+        return product.discountPerc >= discountFilterInputValue;
+        break;
+      case 50:
+        return product.discountPerc >= discountFilterInputValue;
+        break;
+      case 40:
+        return product.discountPerc >= discountFilterInputValue;
+        break;
+      case 30:
+        return product.discountPerc >= discountFilterInputValue;
+        break;
+      default:
+        return product;
+    }
+  });
 
-  const finalProductList = ratingFilteredFinal;
+  const finalProductList = discountFilteredFinal;
 
   return (
     <>
