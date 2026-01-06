@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { sortValueContext } from "../../../App.jsx";
 import { brandFilterValueContext } from "../../../App.jsx";
 import { priceFilterValueContext } from "../../../App.jsx";
+import { ratingFilterValueContext } from "../../../App.jsx";
 
 function ProductCards() {
   const [products, setProducts] = useState([]);
@@ -14,6 +15,10 @@ function ProductCards() {
   );
   const { priceFilterInputValue, setPriceFilterInputValue } = useContext(
     priceFilterValueContext
+  );
+
+  const { ratingFilterInputValue, setRatingFilterInputValue } = useContext(
+    ratingFilterValueContext
   );
 
   useEffect(() => {
@@ -54,26 +59,45 @@ function ProductCards() {
     brandFilterInputValue.length === 0 ? sortFilteredFinal : brandFilteredFinal;
 
   const priceFilteredFinal = productList.filter((product) => {
-    switch(priceFilterInputValue){
+    switch (priceFilterInputValue) {
       case 500:
         return product.price < 500;
         break;
       case 1000:
-        return product.price >= 501 && product.price <=1000
+        return product.price >= 501 && product.price <= 1000;
         break;
       case 2500:
-        return product.price >= 1001 && product.price <=2500
+        return product.price >= 1001 && product.price <= 2500;
         break;
       case 2501:
-        return product.price > 2500
+        return product.price > 2500;
       default:
-        return product
+        return product;
     }
-  })
+  });
 
+  const ratingFilteredFinal = priceFilteredFinal.filter((product) => {
+    switch (ratingFilterInputValue) {
+      case 4:
+        return product.rating >= 4;
+        break;
+      case 3:
+        return product.rating >= 3;
+        break;
+      case 2:
+        return product.rating >= 2;
+        break;
+      case 1:
+        return product.rating >= 1;
+        break;
+      default:
+        return product;
+    }
+  });
 
+  
 
-  const finalProductList = priceFilteredFinal;
+  const finalProductList = ratingFilteredFinal;
 
   return (
     <>
@@ -87,6 +111,7 @@ function ProductCards() {
               price={product.price}
               realPrice={product.realPrice}
               discountPercentage={product.discountPerc}
+              rating={product.rating}
               isSponsored={product.isSponsored}
               productImage={product.image}
               isBestSeller={product.isBestSeller}
@@ -99,5 +124,3 @@ function ProductCards() {
 }
 
 export default ProductCards;
-
-// 6 1 10 9 12

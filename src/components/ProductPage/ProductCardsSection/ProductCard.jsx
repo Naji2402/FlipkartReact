@@ -6,11 +6,26 @@ import EmptyStar from "./PoductCardsAssets/emptyStar.svg";
 import FlipAssured from "./PoductCardsAssets/FAssured.webp";
 
 function ProductCard(props) {
+  let starsArray = [];
+  let emptyStar = [];
+  for (let i = 0; i < props.rating; i++) {
+    starsArray[i] = i;
+  }
+  for (let i = 0; i < 5 - props.rating; i++) {
+    emptyStar[i] = i;
+  }
+
   return (
     <>
       <div className={styles.productCard}>
         <div className={styles.productImageSec}>
-          <div className={`${props.isBestSeller ? styles.bestSeller : styles.bestSellerNone}`}>BEST SELLER</div>
+          <div
+            className={`${
+              props.isBestSeller ? styles.bestSeller : styles.bestSellerNone
+            }`}
+          >
+            BEST SELLER
+          </div>
           <img src={likeSign} className={styles.likeSign} alt="ligh symbol" />
           <img
             src={props.productImage}
@@ -40,11 +55,12 @@ function ProductCard(props) {
           <div className={styles.dealStatus}>Hot Deal</div>
           <div className={styles.ratingSection}>
             <div className={styles.ratingStars}>
-              <img src={FillStar} alt="rating star" />
-              <img src={FillStar} alt="rating star" />
-              <img src={FillStar} alt="rating star" />
-              <img src={FillStar} alt="rating star" />
-              <img src={EmptyStar} alt="rating star" />
+              {starsArray.map((_, index) => {
+                return <img key={index} src={FillStar} alt="rating star" />;
+              })}
+              {emptyStar.map((_, index) => {
+                return <img key={index} src={EmptyStar} alt="empty star" />;
+              })}
             </div>
             <img
               src={FlipAssured}
@@ -58,8 +74,4 @@ function ProductCard(props) {
   );
 }
 
-
-
 export default ProductCard;
-
-

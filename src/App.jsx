@@ -8,12 +8,14 @@ import { createContext, useState } from "react";
 export const sortValueContext = createContext();
 export const brandFilterValueContext = createContext();
 export const priceFilterValueContext = createContext();
+export const ratingFilterValueContext = createContext();
 
 function App() {
   const [sortInputValue, setSortInputValue] = useState("");
   const [brandFilterInputValue, setBrandFilterInputValue] = useState([]);
-  // const [priceFilterInputValue, setPriceFilterInputValue] = useState([]);
   const [priceFilterInputValue, setPriceFilterInputValue] = useState();
+  const [ratingFilterInputValue, setRatingFilterInputValue] = useState();
+
   return (
     <>
       <sortValueContext.Provider value={{ sortInputValue, setSortInputValue }}>
@@ -23,6 +25,7 @@ function App() {
           <priceFilterValueContext.Provider
             value={{ priceFilterInputValue, setPriceFilterInputValue }}
           >
+            <ratingFilterValueContext.Provider value={{ratingFilterInputValue, setRatingFilterInputValue}}>
             <Routes>
               <Route path="/" element={<Final />} />
               <Route path="productPage" element={<PFinal />}>
@@ -30,6 +33,7 @@ function App() {
               </Route>
               <Route path="*" element={<Error />} />
             </Routes>
+            </ratingFilterValueContext.Provider>
           </priceFilterValueContext.Provider>
         </brandFilterValueContext.Provider>
       </sortValueContext.Provider>

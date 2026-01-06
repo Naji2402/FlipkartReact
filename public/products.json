@@ -7,6 +7,7 @@
     "price": 699,
     "realPrice": 1999,
     "discountPerc": 65,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": true,
     "isNewest": false
@@ -19,6 +20,7 @@
     "price": 249,
     "realPrice": 499,
     "discountPerc": 50,
+    "rating": 2,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": true
@@ -31,6 +33,7 @@
     "price": 899,
     "realPrice": 1799,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -43,6 +46,7 @@
     "price": 499,
     "realPrice": 999,
     "discountPerc": 50,
+    "rating": 3,
     "isSponsored": false,
     "isBestSeller": true,
     "isNewest": false
@@ -55,6 +59,7 @@
     "price": 549,
     "realPrice": 1099,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": false,
     "isNewest": false
@@ -67,6 +72,7 @@
     "price": 799,
     "realPrice": 1599,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": true
@@ -79,6 +85,7 @@
     "price": 599,
     "realPrice": 1299,
     "discountPerc": 54,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": true,
     "isNewest": true
@@ -91,6 +98,7 @@
     "price": 749,
     "realPrice": 2499,
     "discountPerc": 70,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -103,6 +111,7 @@
     "price": 199,
     "realPrice": 399,
     "discountPerc": 50,
+    "rating": 2,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -115,6 +124,7 @@
     "price": 649,
     "realPrice": 1299,
     "discountPerc": 50,
+    "rating": 3,
     "isSponsored": false,
     "isBestSeller": false,
     "isNewest": true
@@ -128,6 +138,7 @@
     "price": 749,
     "realPrice": 1999,
     "discountPerc": 63,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -140,6 +151,7 @@
     "price": 229,
     "realPrice": 499,
     "discountPerc": 54,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": true,
     "isNewest": true
@@ -152,6 +164,7 @@
     "price": 949,
     "realPrice": 1899,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": true
@@ -164,6 +177,7 @@
     "price": 529,
     "realPrice": 1099,
     "discountPerc": 52,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": true,
     "isNewest": true
@@ -176,6 +190,7 @@
     "price": 579,
     "realPrice": 1199,
     "discountPerc": 52,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": false,
     "isNewest": false
@@ -188,6 +203,7 @@
     "price": 849,
     "realPrice": 1699,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": true
@@ -200,6 +216,7 @@
     "price": 629,
     "realPrice": 1399,
     "discountPerc": 55,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": true,
     "isNewest": false
@@ -212,6 +229,7 @@
     "price": 799,
     "realPrice": 2399,
     "discountPerc": 67,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": true
@@ -224,6 +242,7 @@
     "price": 189,
     "realPrice": 379,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -236,6 +255,7 @@
     "price": 699,
     "realPrice": 1399,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": true,
     "isNewest": false
@@ -249,6 +269,7 @@
     "price": 799,
     "realPrice": 2199,
     "discountPerc": 64,
+    "rating": 3,
     "isSponsored": true,
     "isBestSeller": true,
     "isNewest": true
@@ -261,6 +282,7 @@
     "price": 259,
     "realPrice": 519,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": true
@@ -273,6 +295,7 @@
     "price": 999,
     "realPrice": 1999,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": true
@@ -285,6 +308,7 @@
     "price": 549,
     "realPrice": 1149,
     "discountPerc": 52,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": true,
     "isNewest": false
@@ -297,6 +321,7 @@
     "price": 599,
     "realPrice": 1249,
     "discountPerc": 52,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": false,
     "isNewest": true
@@ -309,6 +334,7 @@
     "price": 899,
     "realPrice": 1799,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -321,6 +347,7 @@
     "price": 649,
     "realPrice": 1499,
     "discountPerc": 57,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": true,
     "isNewest": false
@@ -333,6 +360,7 @@
     "price": 849,
     "realPrice": 2499,
     "discountPerc": 66,
+    "rating": 3,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -345,6 +373,7 @@
     "price": 209,
     "realPrice": 419,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false
@@ -357,6 +386,7 @@
     "price": 729,
     "realPrice": 1499,
     "discountPerc": 51,
+    "rating": 4,
     "isSponsored": false,
     "isBestSeller": false,
     "isNewest": false
@@ -369,6 +399,7 @@
     "price": 829,
     "realPrice": 2299,
     "discountPerc": 64,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": true,
     "isNewest": true
@@ -381,6 +412,7 @@
     "price": 239,
     "realPrice": 479,
     "discountPerc": 50,
+    "rating": 4,
     "isSponsored": true,
     "isBestSeller": false,
     "isNewest": false

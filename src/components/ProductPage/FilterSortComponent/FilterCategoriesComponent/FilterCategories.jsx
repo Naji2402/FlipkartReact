@@ -13,12 +13,14 @@ import GstIAvailableFilterOptions from "./GstIAvailableFilterOptionsComponent/Gs
 import NewArrivalsFilterOptions from "./NewArrivalsFilterOptionsComponent/NewArrivalsFilterOptions";
 import { brandFilterValueContext } from "../../../../App";
 import { priceFilterValueContext } from "../../../../App";
+import { ratingFilterValueContext } from "../../../../App";
 
 function FilterCategories() {
   const navigate = useNavigate();
   const { brandFilterInputValue, setBrandFilterInputValue } =
     useContext(brandFilterValueContext);
-  const {priceFileterInputValue, setPriceFilterInputValue} = useContext(priceFilterValueContext);
+  const {priceFilterInputValue, setPriceFilterInputValue} = useContext(priceFilterValueContext);
+  const {ratingFilterInputValue, setRatingFilterInputValue} = useContext(ratingFilterValueContext)
 
   const [active, setActive] = useState("Brand");
 
@@ -65,6 +67,7 @@ function FilterCategories() {
   useEffect(() => {
     setBrandFilterInputValue([])
     setPriceFilterInputValue('');
+    setRatingFilterInputValue('');
   }, []);
 
   return (
