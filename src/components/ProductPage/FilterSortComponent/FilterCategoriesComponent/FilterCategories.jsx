@@ -11,12 +11,12 @@ import OffersFilterOptions from "./OffersFilterOptionsComponent/OffersFilterOpti
 import AvailabilityFilterOptions from "./AvailabilityFilterOptionsComponent/AvailabilityFilterOptions";
 import GstIAvailableFilterOptions from "./GstIAvailableFilterOptionsComponent/GstIAvailableFilterOptions";
 import NewArrivalsFilterOptions from "./NewArrivalsFilterOptionsComponent/NewArrivalsFilterOptions";
-import { filterValueContext } from "../../ProductPageFinal/ProductPageFinal";
+import { brandFilterValueContext } from "../../ProductPageFinal/ProductPageFinal";
 
 function FilterCategories() {
   const navigate = useNavigate();
-  const { filterInputValue, setFilterInputValue } =
-    useContext(filterValueContext);
+  const { brandFilterInputValue, setBrandFilterInputValue } =
+    useContext(brandFilterValueContext);
 
   const [active, setActive] = useState("Brand");
 
@@ -61,7 +61,7 @@ function FilterCategories() {
   }
 
   useEffect(() => {
-    setFilterInputValue([])
+    setBrandFilterInputValue([])
   }, []);
 
   return (

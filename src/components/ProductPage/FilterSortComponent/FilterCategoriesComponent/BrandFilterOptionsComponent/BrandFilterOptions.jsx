@@ -2,19 +2,19 @@ import styles from "../FilterCategories.module.css";
 import search from "../../FilterSortImages/SearchIcon.svg";
 import CheckBox from "../CheckBox";
 import { useContext } from "react";
-import { filterValueContext } from "../../../ProductPageFinal/ProductPageFinal";
+import { brandFilterValueContext } from "../../../ProductPageFinal/ProductPageFinal";
 
 function BrandFilterOptions() {
-  const { filterInputValue, setFilterInputValue } =
-    useContext(filterValueContext);
+  const { brandFilterInputValue, setBrandFilterInputValue } =
+    useContext(brandFilterValueContext);
 
-  function filterValue(e) {
+  function brandFilterValue(e) {
     let newValue;
     if (e.currentTarget.checked) {
       newValue = e.currentTarget.value;
-      setFilterInputValue((prev) => [...prev, newValue]);
+      setBrandFilterInputValue((prev) => [...prev, newValue]);
     } else {
-      setFilterInputValue((prev) =>
+      setBrandFilterInputValue((prev) =>
         prev.filter((val) => val != e.currentTarget.value)
       );
     }
@@ -30,21 +30,21 @@ function BrandFilterOptions() {
           <input type="search" placeholder="Search Brand" />
         </div>
         <div className={styles.brandOptions}>
-          <CheckBox name="NIVIA" onChange={filterValue} />
-          <CheckBox name="COSCO" onChange={filterValue} />
-          <CheckBox name="VECTORX" onChange={filterValue} />
-          <CheckBox name="RASCO" onChange={filterValue} />
-          <CheckBox name="PUMA" onChange={filterValue} />
-          <CheckBox name="MAYOR" onChange={filterValue} />
-          <CheckBox name="LatinX" onChange={filterValue} />
-          <CheckBox name="DENOVO" onChange={filterValue} />
-          <CheckBox name="Dinetic" onChange={filterValue} />
-          <CheckBox name="ULTIMATE GOAL" onChange={filterValue} />
-          <CheckBox name="DIBACO SPORTS" onChange={filterValue} />
-          <CheckBox name="BOLDUP" onChange={filterValue} />
-          <CheckBox name="YMD" onChange={filterValue} />
-          <CheckBox name="NICE" onChange={filterValue} />
-          <CheckBox name="gamers hub" onChange={filterValue} />
+          <CheckBox name="NIVIA" value="NIVIA" onChange={brandFilterValue} />
+          <CheckBox name="COSCO" value="COSCO" onChange={brandFilterValue} />
+          <CheckBox name="VECTORX" value="VECTORX" onChange={brandFilterValue} />
+          <CheckBox name="RASCO" value="RASCO" onChange={brandFilterValue} />
+          <CheckBox name="PUMA" value="PUMA" onChange={brandFilterValue} />
+          <CheckBox name="MAYOR" value="MAYOR" onChange={brandFilterValue} />
+          <CheckBox name="LatinX" value="LatinX" onChange={brandFilterValue} />
+          <CheckBox name="DENOVO" value="DENOVO" onChange={brandFilterValue} />
+          <CheckBox name="Dinetic" value="Dinetic" onChange={brandFilterValue} />
+          <CheckBox name="ULTIMATE GOAL" value="ULTIMATE GOAL" onChange={brandFilterValue} />
+          <CheckBox name="DIBACO SPORTS" value="DIBACO SPORTS" onChange={brandFilterValue} />
+          <CheckBox name="BOLDUP" value="BOLDUP" onChange={brandFilterValue} />
+          <CheckBox name="YMD" value="YMD" onChange={brandFilterValue} />
+          <CheckBox name="NICE" value="NINCE" onChange={brandFilterValue} />
+          <CheckBox name="gamers hub" value="gamers hub" onChange={brandFilterValue} />
         </div>
       </div>
     </>

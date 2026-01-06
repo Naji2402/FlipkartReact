@@ -7,7 +7,7 @@ function CheckBox(props) {
         <input
           type="checkbox"
           id={props.name.toLowerCase()}
-          value={props.name}
+          value={props.value}
           onChange={props.onChange}
         />
         <label htmlFor={props.name.toLowerCase()}>{props.name}</label>
@@ -15,5 +15,7 @@ function CheckBox(props) {
     </>
   );
 }
+
+
 
 export default CheckBox;

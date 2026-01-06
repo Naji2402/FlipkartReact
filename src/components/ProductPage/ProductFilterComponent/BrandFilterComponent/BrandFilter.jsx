@@ -1,14 +1,14 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useInsertionEffect } from "react";
 import styles from "./BrandFilter.module.css";
 import arrow from "../ProductFilterAssets/greyArrow.svg";
 import search from "./BrandFIlterAssets/Search.svg";
-import { filterValueContext } from "../../ProductPageFinal/ProductPageFinal";
+import { brandFilterValueContext } from "../../ProductPageFinal/ProductPageFinal";
 
 function BrandFilter() {
   const [brandClick, setBrandClick] = useState(true);
 
-  const { filterInputValue, setFilterInputValue } =
-    useContext(filterValueContext);
+  const { brandFilterInputValue, setBrandFilterInputValue } =
+    useContext(brandFilterValueContext);
 
   function openFilter() {
     setBrandClick(!brandClick);
@@ -18,13 +18,15 @@ function BrandFilter() {
     let newValue;
     if (e.currentTarget.checked) {
       newValue = e.currentTarget.value;
-      setFilterInputValue((prev) => [...prev, newValue]);
+      setBrandFilterInputValue((prev) => [...prev, newValue]);
     } else {
-      setFilterInputValue((prev) =>
+      setBrandFilterInputValue((prev) =>
         prev.filter((val) => val != e.currentTarget.value)
       );
     }
   }
+
+  
 
   return (
     <>
@@ -48,23 +50,48 @@ function BrandFilter() {
               <input type="search" placeholder="Search Brand" />
             </div>
             <div>
-              <input type="checkbox" value="NIVIA" id="NIVIA" onChange={filterValue} />
+              <input
+                type="checkbox"
+                value="NIVIA"
+                id="NIVIA"
+                onChange={filterValue}
+              />
               <label htmlFor="NIVIA">NIVIA</label>
             </div>
             <div>
-              <input type="checkbox" value="COSCO" id="COSCO" onChange={filterValue}/>
+              <input
+                type="checkbox"
+                value="COSCO"
+                id="COSCO"
+                onChange={filterValue}
+              />
               <label htmlFor="COSCO">COSCO</label>
             </div>
             <div>
-              <input type="checkbox" value="VECTORX" id="VECTOR X" onChange={filterValue}/>
+              <input
+                type="checkbox"
+                value="VECTORX"
+                id="VECTOR X"
+                onChange={filterValue}
+              />
               <label htmlFor="VECTOR X">VECTOR X</label>
             </div>
             <div>
-              <input type="checkbox" value="RASCO" id="RASCO" onChange={filterValue}/>
+              <input
+                type="checkbox"
+                value="RASCO"
+                id="RASCO"
+                onChange={filterValue}
+              />
               <label htmlFor="RASCO">RASCO</label>
             </div>
             <div>
-              <input type="checkbox" value="LatinX" id="LatinX" onChange={filterValue}/>
+              <input
+                type="checkbox"
+                value="LatinX"
+                id="LatinX"
+                onChange={filterValue}
+              />
               <label htmlFor="LatinX">LATIN X</label>
             </div>
             <p>605 MORE</p>

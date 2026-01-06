@@ -9,19 +9,19 @@ import { Outlet } from "react-router-dom";
 import { createContext, useState } from "react";
 
 export const sortValueContext = createContext();
-export const filterValueContext = createContext();
+export const brandFilterValueContext = createContext();
 
   
 
 function PFinal() {
   const [sortInputValue, setSortInputValue] = useState("");
-  const [filterInputValue, setFilterInputValue] = useState([]);
+  const [brandFilterInputValue, setBrandFilterInputValue] = useState([]);
 
   return (
     <>
       <sortValueContext.Provider value={{ sortInputValue, setSortInputValue }}>
-        <filterValueContext.Provider
-          value={{ filterInputValue, setFilterInputValue }}
+        <brandFilterValueContext.Provider
+          value={{ brandFilterInputValue, setBrandFilterInputValue }}
         >
           <PHeader />
           <PHeaderLarge />
@@ -31,7 +31,7 @@ function PFinal() {
           <ProductAndFilterFinal />
           <ProductPageFooter />
           <Outlet />
-        </filterValueContext.Provider>
+        </brandFilterValueContext.Provider>
       </sortValueContext.Provider>
     </>
   );
