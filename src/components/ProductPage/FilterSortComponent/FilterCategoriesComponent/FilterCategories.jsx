@@ -11,7 +11,7 @@ import OffersFilterOptions from "./OffersFilterOptionsComponent/OffersFilterOpti
 import AvailabilityFilterOptions from "./AvailabilityFilterOptionsComponent/AvailabilityFilterOptions";
 import GstIAvailableFilterOptions from "./GstIAvailableFilterOptionsComponent/GstIAvailableFilterOptions";
 import NewArrivalsFilterOptions from "./NewArrivalsFilterOptionsComponent/NewArrivalsFilterOptions";
-import { brandFilterValueContext } from "../../ProductPageFinal/ProductPageFinal";
+import { brandFilterValueContext } from "../../../../App";
 
 function FilterCategories() {
   const navigate = useNavigate();

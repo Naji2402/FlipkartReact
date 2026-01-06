@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styles from "./LargeSort.module.css";
 import { useContext } from "react";
-import { sortValueContext } from "../ProductPageFinal/ProductPageFinal";
+
+import { sortValueContext } from "../../../App";
 
 function LargeSort() {
   const { sortInputValue, setSortInputValue } = useContext(sortValueContext);

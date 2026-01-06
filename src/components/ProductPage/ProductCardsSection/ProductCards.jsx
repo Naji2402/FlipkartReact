@@ -2,14 +2,20 @@ import { useEffect, useState } from "react";
 import styles from "./ProductCards.module.css";
 import ProductCard from "./ProductCard.jsx";
 import { useContext } from "react";
-import { sortValueContext } from "../ProductPageFinal/ProductPageFinal.jsx";
-import { brandFilterValueContext } from "../ProductPageFinal/ProductPageFinal.jsx";
+
+import { sortValueContext } from "../../../App.jsx";
+import { brandFilterValueContext } from "../../../App.jsx";
+import { priceFilterValueContext } from "../../../App.jsx";
 
 function ProductCards() {
   const [products, setProducts] = useState([]);
   const { sortInputValue, setSortInputValue } = useContext(sortValueContext);
-  const { brandFilterInputValue, setBrandFilterInputValue } =
-    useContext(brandFilterValueContext);
+  const { brandFilterInputValue, setBrandFilterInputValue } = useContext(
+    brandFilterValueContext
+  );
+  const { priceFilterInputValue, setPriceFilterInputValue } = useContext(
+    priceFilterValueContext
+  );
 
   useEffect(() => {
     async function getProducts() {
@@ -22,7 +28,7 @@ function ProductCards() {
       }
     }
     getProducts();
-  }, [sortInputValue, brandFilterInputValue]);
+  }, [sortInputValue, brandFilterInputValue, brandFilterInputValue]);
 
   const sortFilteredFinal = products.sort((a, b) => {
     switch (sortInputValue) {
@@ -41,12 +47,12 @@ function ProductCards() {
     }
   });
 
-  const filteredFinal = sortFilteredFinal.filter((product) => {
+  const brandFilteredFinal = sortFilteredFinal.filter((product) => {
     return brandFilterInputValue.includes(product.brandName);
   });
 
   const finalProductList =
-    brandFilterInputValue.length === 0 ? sortFilteredFinal : filteredFinal;
+    brandFilterInputValue.length === 0 ? sortFilteredFinal : brandFilteredFinal;
 
   
 

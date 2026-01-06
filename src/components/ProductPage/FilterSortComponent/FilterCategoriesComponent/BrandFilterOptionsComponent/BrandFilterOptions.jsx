@@ -2,7 +2,8 @@ import styles from "../FilterCategories.module.css";
 import search from "../../FilterSortImages/SearchIcon.svg";
 import CheckBox from "../CheckBox";
 import { useContext } from "react";
-import { brandFilterValueContext } from "../../../ProductPageFinal/ProductPageFinal";
+
+import { brandFilterValueContext } from "../../../../../App";
 
 function BrandFilterOptions() {
   const { brandFilterInputValue, setBrandFilterInputValue } =
@@ -14,8 +15,9 @@ function BrandFilterOptions() {
       newValue = e.currentTarget.value;
       setBrandFilterInputValue((prev) => [...prev, newValue]);
     } else {
+      newValue = e.currentTarget.value;
       setBrandFilterInputValue((prev) =>
-        prev.filter((val) => val != e.currentTarget.value)
+        prev.filter((val) => val != newValue)
       );
     }
   }

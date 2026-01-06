@@ -2,7 +2,8 @@ import { useState, useContext, useInsertionEffect } from "react";
 import styles from "./BrandFilter.module.css";
 import arrow from "../ProductFilterAssets/greyArrow.svg";
 import search from "./BrandFIlterAssets/Search.svg";
-import { brandFilterValueContext } from "../../ProductPageFinal/ProductPageFinal";
+
+import { brandFilterValueContext } from "../../../../App";
 
 function BrandFilter() {
   const [brandClick, setBrandClick] = useState(true);

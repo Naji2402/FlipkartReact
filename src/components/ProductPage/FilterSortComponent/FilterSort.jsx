@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import styles from "./FilterSort.module.css";
 import Sort from "./FilterSortImages/sort.svg";
 import Filter from "./FilterSortImages/filter.svg";
-import { sortValueContext } from "../ProductPageFinal/ProductPageFinal";
+
+import { sortValueContext } from "../../../App";
 
 function FilterSort() {
   const [sortClicked, setSortClicked] = useState(false);
