@@ -15,6 +15,8 @@ function DiscountFilter() {
         }
     }
 
+    
+
   function openSection() {
     setCRatingClicked(!cRatingClicked);
   }
@@ -63,3 +65,4 @@ function DiscountFilter() {
 }
 
 export default DiscountFilter;
+

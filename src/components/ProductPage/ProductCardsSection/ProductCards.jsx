@@ -7,6 +7,7 @@ import { brandFilterValueContext } from "../../../App.jsx";
 import { priceFilterValueContext } from "../../../App.jsx";
 import { ratingFilterValueContext } from "../../../App.jsx";
 import { discountFilterValueContext } from "../../../App.jsx";
+import { priceSliderValueContext } from "../../../App.jsx";
 
 function ProductCards() {
   const [products, setProducts] = useState([]);
@@ -26,6 +27,9 @@ function ProductCards() {
     discountFilterValueContext
   );
 
+  const { priceFilterSliderInputValue, setPriceFilterSliderInputValue } =
+    useContext(priceSliderValueContext);
+
   useEffect(() => {
     async function getProducts() {
       try {
@@ -37,7 +41,7 @@ function ProductCards() {
       }
     }
     getProducts();
-  }, [sortInputValue, brandFilterInputValue, brandFilterInputValue]);
+  }, [sortInputValue, brandFilterInputValue, brandFilterInputValue, priceFilterSliderInputValue]);
 
   const sortFilteredFinal = products.sort((a, b) => {
     switch (sortInputValue) {
@@ -122,7 +126,11 @@ function ProductCards() {
     }
   });
 
-  const finalProductList = discountFilteredFinal;
+  const priceSliderFilteredFinal = discountFilteredFinal.filter(product => {
+    return product.price >= priceFilterSliderInputValue.minPrice && product.price <= priceFilterSliderInputValue.maxPrice;
+  })
+
+  const finalProductList = priceSliderFilteredFinal;
 
   return (
     <>

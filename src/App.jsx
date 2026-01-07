@@ -10,6 +10,9 @@ export const brandFilterValueContext = createContext();
 export const priceFilterValueContext = createContext();
 export const ratingFilterValueContext = createContext();
 export const discountFilterValueContext = createContext();
+export const priceSliderValueContext = createContext();
+
+
 
 function App() {
   const [sortInputValue, setSortInputValue] = useState("");
@@ -17,6 +20,9 @@ function App() {
   const [priceFilterInputValue, setPriceFilterInputValue] = useState();
   const [ratingFilterInputValue, setRatingFilterInputValue] = useState();
   const [discountFilterInputValue, setDiscountFilterInputValue] = useState();
+  const [priceFilterSliderInputValue, setPriceFilterSliderInputValue] = useState({ minPrice: 0, maxPrice: 2500 });
+
+  
 
   return (
     <>
@@ -36,13 +42,20 @@ function App() {
                   setDiscountFilterInputValue,
                 }}
               >
-                <Routes>
-                  <Route path="/" element={<Final />} />
-                  <Route path="productPage" element={<PFinal />}>
-                    <Route path="filter" element={<FilterCategories />} />
-                  </Route>
-                  <Route path="*" element={<Error />} />
-                </Routes>
+                <priceSliderValueContext.Provider
+                  value={{
+                    priceFilterSliderInputValue,
+                    setPriceFilterSliderInputValue,
+                  }}
+                >
+                  <Routes>
+                    <Route path="/" element={<Final />} />
+                    <Route path="productPage" element={<PFinal />}>
+                      <Route path="filter" element={<FilterCategories />} />
+                    </Route>
+                    <Route path="*" element={<Error />} />
+                  </Routes>
+                </priceSliderValueContext.Provider>
               </discountFilterValueContext.Provider>
             </ratingFilterValueContext.Provider>
           </priceFilterValueContext.Provider>

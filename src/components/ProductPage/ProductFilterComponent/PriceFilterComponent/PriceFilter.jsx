@@ -1,18 +1,41 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./PriceFilter.module.css";
+import { priceSliderValueContext } from "../../../../App";
 
 function PriceFilter() {
-  const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(5000);
+  const { priceFilterSliderInputValue, setPriceFilterSliderInputValue } =
+    useContext(priceSliderValueContext);
 
   function minPriceChange(e) {
-    setMinPrice(Number(e.target.value))
-    // console.log(minPrice);
+    const value = Number(e.currentTarget.value);
+    setPriceFilterSliderInputValue({
+      ...priceFilterSliderInputValue,
+      minPrice: value,
+    });
   }
 
   function maxpriceChange(e) {
-    setMaxPrice(Number(e.target.value))
-    // console.log(maxPrice);
+    const value = Number(e.currentTarget.value);
+    setPriceFilterSliderInputValue({
+      ...priceFilterSliderInputValue,
+      maxPrice: value,
+    });
+  }
+
+  function minPriceSelectChange(e) {
+    const priceValue = Number(e.currentTarget.value);
+    setPriceFilterSliderInputValue({
+      ...priceFilterSliderInputValue,
+      minPrice: priceValue,
+    });
+  }
+
+  function maxPriceSelectChange(e) {
+    const priceValue = Number(e.currentTarget.value);
+    setPriceFilterSliderInputValue({
+      ...priceFilterSliderInputValue,
+      maxPrice: priceValue,
+    });
   }
 
   return (
@@ -24,51 +47,51 @@ function PriceFilter() {
         <div>
           <div className={styles.sliderMain}>
             <div className={styles.priceGraph}>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
             <div className={styles.rangeFill}></div>
             <input
               type="range"
-              value={minPrice}
+              value={priceFilterSliderInputValue.minPrice}
               min="0"
-              max="5000"
-              step="500"
-              onChange={(e) => minPriceChange(e)}
+              max="2500"
+              step="50"
+              onChange={minPriceChange}
             />
             <input
               type="range"
-              value={maxPrice}
+              value={priceFilterSliderInputValue.maxPrice}
               min="0"
-              max="5000"
-              step="500"
-              onChange={(e) => maxpriceChange(e)}
+              max="2500"
+              step="50"
+              onChange={maxpriceChange}
             />
             <div className={styles.priceRangeSteps}>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
             </div>
             <div className={styles.minMaxPriceShow}>
-                <select>
-                    <option defaultValue="Min">Min</option>
-                    <option defaultValue="500">500</option>
-                    <option defaultValue="5000">1000</option>
-                    <option defaultValue="5000">2500</option>
-                    <option defaultValue="5000">5000+</option>
-                </select>
-                <p>to</p>
-                <select defaultValue="5000+">
-                    <option defaultValue="500">500</option>
-                    <option defaultValue="5000">1000</option>
-                    <option defaultValue="5000">2500</option>
-                    <option defaultValue="5000">5000+</option>
-                </select>
+              <select onChange={minPriceSelectChange}>
+                <option value="0">Min</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="2500">2500+</option>
+              </select>
+              <p>to</p>
+              <select defaultValue="2500" onChange={maxPriceSelectChange}>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="2500">2500+</option>
+              </select>
             </div>
           </div>
         </div>
