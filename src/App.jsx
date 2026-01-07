@@ -12,17 +12,14 @@ export const ratingFilterValueContext = createContext();
 export const discountFilterValueContext = createContext();
 export const priceSliderValueContext = createContext();
 
-
-
 function App() {
   const [sortInputValue, setSortInputValue] = useState("");
   const [brandFilterInputValue, setBrandFilterInputValue] = useState([]);
   const [priceFilterInputValue, setPriceFilterInputValue] = useState();
   const [ratingFilterInputValue, setRatingFilterInputValue] = useState();
   const [discountFilterInputValue, setDiscountFilterInputValue] = useState();
-  const [priceFilterSliderInputValue, setPriceFilterSliderInputValue] = useState({ minPrice: 0, maxPrice: 2500 });
-
-  
+  const [priceFilterSliderInputValue, setPriceFilterSliderInputValue] =
+    useState({ minPrice: 0, maxPrice: 2500 });
 
   return (
     <>

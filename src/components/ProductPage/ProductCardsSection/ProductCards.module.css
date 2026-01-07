@@ -146,9 +146,91 @@
     align-items: center;
     gap: 8px;
 }
+
+.raingLarge{
+    display: none;
+    margin: 5px 0;
+    gap: 8px;
+}
+
+.raingLarge span{
+    font-size: 13px;
+    font-family: SemiBold;
+    color: #878787;
+    font-weight: 500;
+}
+
+.raingLarge .assuredLogoLarge{
+    width: 70px;
+}
+
+
+
+.ratingBox{
+    background-color:#388e3c;
+    border-radius: 3px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 4px 2px 6px;
+    gap: 2px;
+    height: 19px;
+}
+
+.ratingBox span{
+    font-size: 11px;
+    font-weight: 500;
+    font-family: SemiBold;
+    color: white;
+}
+
+.ratingBox img{
+    width: 10px;
+    height: 10px;
+    margin-bottom: 2px;
+}
+
 .assuredLogo{
     width: 55px;
     margin-top: 12px;
+}
+
+.priceDetailsLarge{
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+
+.priceDetailsLarge p:nth-child(1){
+    font-size: 15px;
+    font-family: SemiBold;
+    color: black;
+    font-weight: 500;
+}
+
+.priceDetailsLarge p:nth-child(2){
+    text-decoration: line-through;
+    color: #878787;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.priceDetailsLarge p:nth-child(3){
+    font-size: 12px;
+    font-family: SemiBold;
+    color:#008C00;
+    font-weight: 500;
+    letter-spacing: -.2px;
+}
+
+.blackStar{
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    width: 14px;
 }
 
 @media screen and (min-width: 1170px) {
@@ -160,10 +242,40 @@
     .productCard{
         border-left: none;
         transition: box-shadow .2s ease-in-out;
+        padding: 26px 16px 0;
     }
     .productCard:hover{
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.164);
         z-index: 1;
     }
+    .raingLarge{
+        display: flex;
+    }
+    .ratingSection{
+        display: none;
+    }
+    .priceDetails{
+        display: none;
+    }
+    .priceDetailsLarge{
+        display: flex;
+    }
+    .productDetailsSec h3{
+        font-size: 13px;
+        margin: 5px 0;
+    }
+    .product{
+        margin: 36px 0;
+    }
+    .likeSign{
+        display: none;
+    }
+    .blackStar{
+        display: block;
+    }
+    .bestSeller{
+        top: 0;
+    }
 }
+
 

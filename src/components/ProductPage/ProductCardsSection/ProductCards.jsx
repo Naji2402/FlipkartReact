@@ -145,6 +145,7 @@ function ProductCards() {
               realPrice={product.realPrice}
               discountPercentage={product.discountPerc}
               rating={product.rating}
+              ratedUsers={product.ratedUsers}
               isSponsored={product.isSponsored}
               productImage={product.image}
               isBestSeller={product.isBestSeller}

@@ -3,15 +3,17 @@ import likeSign from "./PoductCardsAssets/likeSign.svg";
 import downArrow from "./PoductCardsAssets/downArrow.svg";
 import FillStar from "./PoductCardsAssets/Star.svg";
 import EmptyStar from "./PoductCardsAssets/emptyStar.svg";
+import WhiteStar from "./PoductCardsAssets/whiteStar.svg";
 import FlipAssured from "./PoductCardsAssets/FAssured.webp";
+import BlackStar from "./PoductCardsAssets/largetStar.svg"
 
 function ProductCard(props) {
   let starsArray = [];
   let emptyStar = [];
-  for (let i = 0; i < props.rating; i++) {
+  for (let i = 0; i < Math.floor(props.rating); i++) {
     starsArray[i] = i;
   }
-  for (let i = 0; i < 5 - props.rating; i++) {
+  for (let i = 0; i < 5 - Math.floor(props.rating); i++) {
     emptyStar[i] = i;
   }
 
@@ -27,6 +29,7 @@ function ProductCard(props) {
             BEST SELLER
           </div>
           <img src={likeSign} className={styles.likeSign} alt="ligh symbol" />
+          <img src={BlackStar} className={styles.blackStar} alt="black star" />
           <img
             src={props.productImage}
             className={styles.product}
@@ -36,6 +39,19 @@ function ProductCard(props) {
         <div className={styles.productDetailsSec}>
           <span>{props.isSponsored ? "Sponsored" : ""}</span>
           <h3>{props.name}</h3>
+          <div className={styles.raingLarge}>
+            <div className={styles.ratingBox}>
+              <span>{props.rating}</span>
+              <img src={WhiteStar} alt="" />
+            </div>
+            <span>({props.ratedUsers.toLocaleString("en-IN")})</span>
+            <img src={FlipAssured} className={styles.assuredLogoLarge} alt="" />
+          </div>
+          <div className={styles.priceDetailsLarge}>
+            <p>₹{props.price.toLocaleString("en-IN")}</p>
+            <p>₹{props.realPrice.toLocaleString("en-IN")}</p>
+            <p>{props.discountPercentage}% off</p>
+          </div>
           <div className={styles.priceDetails}>
             <div className={styles.discountDet}>
               <img
@@ -46,8 +62,8 @@ function ProductCard(props) {
               <p>{props.discountPercentage}%</p>
             </div>
             <div className={styles.prices}>
-              <p>₹{props.realPrice}</p>
-              <p>₹{props.price}</p>
+              <p>₹{props.realPrice.toLocaleString("en-IN")}</p>
+              <p>₹{props.price.toLocaleString("en-IN")}</p>
             </div>
           </div>
         </div>
