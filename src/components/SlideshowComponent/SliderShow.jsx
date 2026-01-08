@@ -86,7 +86,7 @@ function Slide() {
     }
   }, [currentIndex]);
 
-
+  
 
   return (
     <>
@@ -117,7 +117,7 @@ function Slide() {
                 key={index}
                 id={index}
                 className={
-                  index === currentIndex ? "progress-bar" : "progress-bar close"
+                  index === currentIndex ? "progress-bar-open" : "progress-bar close"
                 }
               ></div>
             );
