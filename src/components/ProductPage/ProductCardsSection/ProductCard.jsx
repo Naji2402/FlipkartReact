@@ -5,7 +5,7 @@ import FillStar from "./PoductCardsAssets/Star.svg";
 import EmptyStar from "./PoductCardsAssets/emptyStar.svg";
 import WhiteStar from "./PoductCardsAssets/whiteStar.svg";
 import FlipAssured from "./PoductCardsAssets/FAssured.webp";
-import BlackStar from "./PoductCardsAssets/largetStar.svg"
+import BlackStar from "./PoductCardsAssets/largetStar.svg";
 
 function ProductCard(props) {
   let starsArray = [];
@@ -13,6 +13,7 @@ function ProductCard(props) {
   for (let i = 0; i < Math.floor(props.rating); i++) {
     starsArray[i] = i;
   }
+
   for (let i = 0; i < 5 - Math.floor(props.rating); i++) {
     emptyStar[i] = i;
   }
@@ -90,4 +91,7 @@ function ProductCard(props) {
   );
 }
 
+
+
 export default ProductCard;
+
