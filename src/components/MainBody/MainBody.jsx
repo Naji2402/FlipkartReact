@@ -9,14 +9,16 @@ import FooterComponent from "../FooterComponent/FooterComponent.jsx";
 function Main() {
   return (
     <>
-      <div className="main-content-section">
-        <Search />
-        <CategoriesLarge />
-        <Slide />
-        <Categories />
-        <RandomBox />
+      <div className="mainbody-main">
+        <div className="main-content-section">
+          <Search />
+          <CategoriesLarge />
+          <Slide />
+          <Categories />
+          <RandomBox />
+        </div>
+        <FooterComponent />
       </div>
-      <FooterComponent />
     </>
   );
 }

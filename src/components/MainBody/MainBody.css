@@ -1,4 +1,10 @@
-
+.mainbody-main{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    position: relative;
+    height: 100vh;
+}
 
 @media screen and (min-width:768px){
     .main-content-section{
