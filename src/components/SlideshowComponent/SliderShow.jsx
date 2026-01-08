@@ -10,11 +10,13 @@ import SlideImg7 from "./SlideshowComponentImages/SlideImage7.webp";
 import SlideImg8 from "./SlideshowComponentImages/SlideImage8.webp";
 import SlideImg9 from "./SlideshowComponentImages/SlideImage9.webp";
 import SlideImg10 from "./SlideshowComponentImages/SlideImage10.webp";
+import SlideImgL1 from "./SlideshowComponentImages/SlideImageL1.webp";
+import SlideImgL2 from "./SlideshowComponentImages/SlideImageL2.webp";
 import ArrowRight from "./SlideshowComponentImages/ArrowRight.svg";
 import ArrowLeft from "./SlideshowComponentImages/ArrowLeft.svg";
 import js from "@eslint/js";
 
-let slides = [
+const slides = [
   {
     image: SlideImg1,
     description: "image1",
@@ -57,16 +59,52 @@ let slides = [
   },
 ];
 
+const slidesLarge = [
+  {
+    img: SlideImgL1,
+    description: "imageL1",
+  },
+  {
+    img: SlideImgL2,
+    description: "imageL2",
+  },
+  {
+    img: SlideImgL1,
+    description: "imageL1",
+  },
+  {
+    img: SlideImgL2,
+    description: "imageL2",
+  },
+  {
+    img: SlideImgL1,
+    description: "imageL1",
+  },
+  {
+    img: SlideImgL2,
+    description: "imageL2",
+  },
+];
+
 function Slide() {
   const sliderRef = useRef(null);
+  const sliderLargeRef = useRef(null);
+
   const slideWidthRef = useRef(null);
+  const slideLargeWidthRef = useRef(null);
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentLargeIndex, setCurrentLargeIndex] = useState(0);
+
+
 
   useEffect(() => {
     setTimeout(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setCurrentLargeIndex((prev) => (prev === slidesLarge.length - 1 ? 0 : prev + 1));
     }, 3000);
   });
+
 
   function slidePrev() {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev - 1));
@@ -86,15 +124,20 @@ function Slide() {
     }
   }, [currentIndex]);
 
-  
+  useEffect(() => {
+    if (sliderLargeRef) {
+      sliderLargeRef.current.scrollTo({
+        top: 0,
+        left: currentIndex * (slideLargeWidthRef.current.clientWidth),
+        behavior: "smooth",
+      });
+    }
+  }, [currentLargeIndex]);
 
   return (
     <>
       <div className="slide-section-main">
         <div className="slide-image-section" ref={sliderRef}>
-          <div className="arrow-main left-arrow" onClick={slidePrev}>
-            <img src={ArrowLeft} alt="left arrow" className="arrow" />
-          </div>
           {slides.map((slide, index) => {
             return (
               <img
@@ -106,9 +149,6 @@ function Slide() {
               />
             );
           })}
-          <div className="arrow-main right-arrow" onClick={slideNext}>
-            <img src={ArrowRight} alt="right arrow" className="arrow" />
-          </div>
         </div>
         <div className="slide-progress-bar">
           {slides.map((_, index) => {
@@ -117,7 +157,45 @@ function Slide() {
                 key={index}
                 id={index}
                 className={
-                  index === currentIndex ? "progress-bar-open" : "progress-bar close"
+                  index === currentIndex
+                    ? "progress-bar-open"
+                    : "progress-bar close"
+                }
+              ></div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="slide-image-large-main">
+        <div className="slide-image-large" ref={sliderLargeRef}>
+          <div className="arrow-main left-arrow" onClick={slidePrev}>
+            <img src={ArrowLeft} alt="left arrow" className="arrow" />
+          </div>
+          {slidesLarge.map((slide, index) => {
+            return (
+              <img
+                key={index}
+                src={slide.img}
+                alt={slide.description}
+                className="slide-image-l"
+                ref={slideLargeWidthRef}
+              />
+            );
+          })}
+          <div className="arrow-main right-arrow" onClick={slideNext}>
+            <img src={ArrowRight} alt="right arrow" className="arrow" />
+          </div>
+        </div>
+        <div className="progress-bar-large">
+          {slidesLarge.map((_, index) => {
+            return (
+              <div
+                key={index}
+                id={index}
+                className={
+                  index === currentLargeIndex
+                    ? "progress-bar-open"
+                    : "progress-bar close"
                 }
               ></div>
             );
