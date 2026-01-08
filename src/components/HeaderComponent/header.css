@@ -187,6 +187,7 @@
 @media  screen and (min-width:1190px) {
       .header-main{
         max-width: 1600px;
+        padding: 11px;
       }
       .header-right-section div:nth-child(3) span{
         display: flex;
@@ -202,6 +203,9 @@
       }
       .header-right-section {
         gap: 50px;
+      }
+      .header{
+        padding: 0 16px 0;
       }
 }
 

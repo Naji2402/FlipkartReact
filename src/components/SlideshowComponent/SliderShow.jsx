@@ -12,6 +12,9 @@ import SlideImg9 from "./SlideshowComponentImages/SlideImage9.webp";
 import SlideImg10 from "./SlideshowComponentImages/SlideImage10.webp";
 import SlideImgL1 from "./SlideshowComponentImages/SlideImageL1.webp";
 import SlideImgL2 from "./SlideshowComponentImages/SlideImageL2.webp";
+import SlideImgL3 from "./SlideshowComponentImages/SlideImageL3.webp";
+import SlideImgL4 from "./SlideshowComponentImages/SlideImageL4.webp";
+import SlideImgL5 from "./SlideshowComponentImages/SlideImageL5.webp";
 import ArrowRight from "./SlideshowComponentImages/ArrowRight.svg";
 import ArrowLeft from "./SlideshowComponentImages/ArrowLeft.svg";
 import js from "@eslint/js";
@@ -69,21 +72,17 @@ const slidesLarge = [
     description: "imageL2",
   },
   {
-    img: SlideImgL1,
-    description: "imageL1",
+    img: SlideImgL3,
+    description: "imageL3",
   },
   {
-    img: SlideImgL2,
-    description: "imageL2",
+    img: SlideImgL4,
+    description: "imageL4",
   },
   {
-    img: SlideImgL1,
-    description: "imageL1",
-  },
-  {
-    img: SlideImgL2,
-    description: "imageL2",
-  },
+    img: SlideImgL5,
+    description: "imageL5",
+  }
 ];
 
 function Slide() {
@@ -99,19 +98,25 @@ function Slide() {
 
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-      setCurrentLargeIndex((prev) => (prev === slidesLarge.length - 1 ? 0 : prev + 1));
+      setCurrentLargeIndex((prev) =>
+        prev === slidesLarge.length - 1 ? 0 : prev + 1
+      );
     }, 3000);
+    return () => clearTimeout(timer);
   });
 
-
   function slidePrev() {
-    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev - 1));
+    setCurrentLargeIndex((prev) =>
+      prev === slidesLarge.length - 1 ? 0 : prev - 1
+    );
   }
 
   function slideNext() {
-    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    setCurrentLargeIndex((prev) =>
+      prev === slidesLarge.length - 1 ? 0 : prev + 1
+    );
   }
 
   useEffect(() => {
@@ -128,7 +133,7 @@ function Slide() {
     if (sliderLargeRef) {
       sliderLargeRef.current.scrollTo({
         top: 0,
-        left: currentIndex * (slideLargeWidthRef.current.clientWidth),
+        left: currentLargeIndex * slideLargeWidthRef.current.clientWidth,
         behavior: "smooth",
       });
     }
