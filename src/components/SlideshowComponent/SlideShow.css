@@ -1,5 +1,6 @@
 .slide-section-main {
   width: 100%;
+  position: relative;
 }
 
 .slide-image-section {
@@ -9,8 +10,6 @@
   gap: 20px;
   overflow: scroll;
   scrollbar-width: none;
-  scroll-snap-type: x mandatory;
-  position: relative;
   align-items: center;
 }
 
@@ -32,6 +31,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  z-index: 10;
 }
 .left-arrow {
   left: 0;

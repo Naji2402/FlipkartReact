@@ -12,6 +12,7 @@ import SlideImg9 from "./SlideshowComponentImages/SlideImage9.webp";
 import SlideImg10 from "./SlideshowComponentImages/SlideImage10.webp";
 import ArrowRight from "./SlideshowComponentImages/ArrowRight.svg";
 import ArrowLeft from "./SlideshowComponentImages/ArrowLeft.svg";
+import js from "@eslint/js";
 
 let slides = [
   {
@@ -59,32 +60,33 @@ let slides = [
 function Slide() {
   const sliderRef = useRef(null);
   const slideWidthRef = useRef(null);
-  const [current, setCurrent] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     }, 3000);
   });
 
   function slidePrev() {
-    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev - 1));
-  }
-  function slideNext() {
-    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev - 1));
   }
 
+  function slideNext() {
+    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  }
 
   useEffect(() => {
-    sliderRef.current.scrollTo({
-      top: 0,
-      left: current * (slideWidthRef.current.clientWidth + 20) ,
-      behavior: "smooth",
-    });
-  }, [current]);
+    if (sliderRef) {
+      sliderRef.current.scrollTo({
+        top: 0,
+        left: currentIndex * (slideWidthRef.current.clientWidth + 20),
+        behavior: "smooth",
+      });
+    }
+  }, [currentIndex]);
 
- 
+
 
   return (
     <>
@@ -115,7 +117,7 @@ function Slide() {
                 key={index}
                 id={index}
                 className={
-                  index === current ? "progress-bar" : "progress-bar close"
+                  index === currentIndex ? "progress-bar" : "progress-bar close"
                 }
               ></div>
             );
