@@ -109,13 +109,13 @@ function Slide() {
 
   function slidePrev() {
     setCurrentLargeIndex((prev) =>
-      prev > 0 ? prev === slidesLarge.length - 1 ? 0 :  prev - 1 : prev = 0
+      prev > 0 ? prev === slidesLarge.length ? 0 :  prev - 1 : prev = 0
     );
   }
 
   function slideNext() {
     setCurrentLargeIndex((prev) =>
-      prev === slidesLarge.length - 1 ? 0 : prev + 1
+      prev === slidesLarge.length - 1? 0 : prev + 1
     );
   }
 
