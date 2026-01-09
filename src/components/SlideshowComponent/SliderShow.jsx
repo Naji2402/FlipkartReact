@@ -109,7 +109,7 @@ function Slide() {
 
   function slidePrev() {
     setCurrentLargeIndex((prev) =>
-      prev === slidesLarge.length - 1 ? 0 : prev - 1
+      prev > 0 ? prev === slidesLarge.length - 1 ? 0 :  prev - 1 : prev = 0
     );
   }
 

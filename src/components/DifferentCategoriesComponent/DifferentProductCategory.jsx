@@ -16,4 +16,8 @@ function DifferentProductCategory(props) {
   );
 }
 
+
+
 export default DifferentProductCategory;
+
+// 6 4 9 9 12
