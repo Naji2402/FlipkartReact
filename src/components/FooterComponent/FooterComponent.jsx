@@ -9,6 +9,8 @@ import helpCenter from "./FooterComponentAssets/helpcenter.svg";
 import paymentMethods from "./FooterComponentAssets/paymentMethods.svg";
 import styles from "./FooterComponent.module.css"
 
+
+
 function FooterComponent() {
     return (
         <>

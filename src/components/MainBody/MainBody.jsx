@@ -5,6 +5,7 @@ import RandomBox from "../RandomComponent/RandomBox";
 import CategoriesLarge from "../CategoriesLargeComponent/CategoriesLarge";
 import "./MainBody.css";
 import FooterComponent from "../FooterComponent/FooterComponent.jsx";
+import DifferentCategories from "../DifferentCategoriesComponent/DifferentCategories.jsx";
 
 function Main() {
   return (
@@ -16,6 +17,7 @@ function Main() {
           <Slide />
           <Categories />
           <RandomBox />
+          <DifferentCategories />
         </div>
         <FooterComponent />
       </div>

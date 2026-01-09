@@ -2,8 +2,8 @@
   width: 100%;
   display: none;
   background-color: #212121;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
 }
 .footerTop {
   display: flex;

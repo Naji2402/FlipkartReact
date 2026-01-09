@@ -17,7 +17,7 @@ import SlideImgL4 from "./SlideshowComponentImages/SlideImageL4.webp";
 import SlideImgL5 from "./SlideshowComponentImages/SlideImageL5.webp";
 import ArrowRight from "./SlideshowComponentImages/ArrowRight.svg";
 import ArrowLeft from "./SlideshowComponentImages/ArrowLeft.svg";
-import js from "@eslint/js";
+
 
 const slides = [
   {

@@ -1,0 +1,102 @@
+*{
+    text-decoration: none;
+}
+
+.CardMain {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  background-color: #f1f2f4d2;
+  padding: 16px 0;
+}
+
+.CategoriesCard {
+  padding: 16px;
+  background-color: white;
+}
+
+.CategoriesCardHeading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 10px 0;
+}
+
+.CategoriesCardHeading h1 {
+  font-size: 22px;
+  font-family: SemiBold;
+  color: black;
+  line-height: 30px;
+  left: -0.02px;
+  margin-bottom: 16px;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  background-color: #2a55e5;
+  border-radius: 50%;
+}
+
+.arrow img {
+  margin-bottom: 8px;
+  margin-right: 7px;
+}
+
+.Categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.Product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 4px;
+}
+
+.Product img {
+  width: 100%;
+  padding: 8px 8px 0;
+}
+
+.Product div {
+  margin-top: 16px;
+}
+
+.Product div h2 {
+  font-size: 17px;
+  font-family: Regular;
+  font-weight: 400;
+  color: black;
+  line-height: 24px;
+  letter-spacing: -0.01px;
+}
+
+.Product div h3 {
+  font-size: 17px;
+  font-family: SemiBold;
+  font-weight: 400;
+  color: #108934;
+  line-height: 24px;
+  letter-spacing: -0.01px;
+}
+
+@media screen and (min-width: 1190px) {
+  .CardMain {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .CardMain {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
