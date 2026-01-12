@@ -95,16 +95,16 @@ function Slide() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentLargeIndex, setCurrentLargeIndex] = useState(0);
 
-
+  
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
       setCurrentLargeIndex((prev) =>
         prev === slidesLarge.length - 1 ? 0 : prev + 1
       );
     }, 3000);
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   });
 
   function slidePrev() {

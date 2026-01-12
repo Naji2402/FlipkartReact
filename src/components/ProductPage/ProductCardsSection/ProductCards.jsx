@@ -146,6 +146,8 @@ function ProductCards() {
     );
   });
 
+  
+
   const finalProductList = priceSliderFilteredFinal;
 
   return (
