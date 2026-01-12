@@ -12,6 +12,8 @@ function DiscountFilter() {
         if (e.currentTarget.checked) {
             discountValue = Number(e.currentTarget.value);
             setDiscountFilterInputValue(discountValue)
+        }else {
+          setDiscountFilterInputValue('')
         }
     }
 

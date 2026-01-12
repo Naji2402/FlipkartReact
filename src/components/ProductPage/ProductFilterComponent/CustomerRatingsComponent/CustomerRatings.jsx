@@ -14,8 +14,11 @@ function CustomerRatings() {
     if (e.currentTarget.checked) {
       ratingValue = Number(e.currentTarget.value);
       setRatingFilterInputValue(ratingValue);
+    }else {
+      setRatingFilterInputValue('')
     }
   }
+
 
   function openSection() {
     setCRatingClicked(!cRatingClicked);

@@ -41,7 +41,12 @@ function ProductCards() {
       }
     }
     getProducts();
-  }, [sortInputValue, brandFilterInputValue, brandFilterInputValue, priceFilterSliderInputValue]);
+  }, [
+    sortInputValue,
+    brandFilterInputValue,
+    brandFilterInputValue,
+    priceFilterSliderInputValue,
+  ]);
 
   const sortFilteredFinal = products.sort((a, b) => {
     switch (sortInputValue) {
@@ -86,49 +91,60 @@ function ProductCards() {
   });
 
   const ratingFilteredFinal = priceFilteredFinal.filter((product) => {
-    switch (ratingFilterInputValue) {
-      case 4:
-        return product.rating >= ratingFilterInputValue;
-        break;
-      case 3:
-        return product.rating >= ratingFilterInputValue;
-        break;
-      case 2:
-        return product.rating >= ratingFilterInputValue;
-        break;
-      case 1:
-        return product.rating >= ratingFilterInputValue;
-        break;
-      default:
-        return product;
+    if (ratingFilterInputValue) {
+      switch (ratingFilterInputValue) {
+        case 4:
+          return product.rating >= ratingFilterInputValue;
+          break;
+        case 3:
+          return product.rating >= ratingFilterInputValue;
+          break;
+        case 2:
+          return product.rating >= ratingFilterInputValue;
+          break;
+        case 1:
+          return product.rating >= ratingFilterInputValue;
+          break;
+        default:
+          return product;
+      }
+    } else {
+      return product;
     }
   });
 
   const discountFilteredFinal = ratingFilteredFinal.filter((product) => {
-    switch (discountFilterInputValue) {
-      case 70:
-        return product.discountPerc >= discountFilterInputValue;
-        break;
-      case 60:
-        return product.discountPerc >= discountFilterInputValue;
-        break;
-      case 50:
-        return product.discountPerc >= discountFilterInputValue;
-        break;
-      case 40:
-        return product.discountPerc >= discountFilterInputValue;
-        break;
-      case 30:
-        return product.discountPerc >= discountFilterInputValue;
-        break;
-      default:
-        return product;
+    if (discountFilterInputValue) {
+      switch (discountFilterInputValue) {
+        case 70:
+          return product.discountPerc >= discountFilterInputValue;
+          break;
+        case 60:
+          return product.discountPerc >= discountFilterInputValue;
+          break;
+        case 50:
+          return product.discountPerc >= discountFilterInputValue;
+          break;
+        case 40:
+          return product.discountPerc >= discountFilterInputValue;
+          break;
+        case 30:
+          return product.discountPerc >= discountFilterInputValue;
+          break;
+        default:
+          return product;
+      }
+    } else {
+      return product;
     }
   });
 
-  const priceSliderFilteredFinal = discountFilteredFinal.filter(product => {
-    return product.price >= priceFilterSliderInputValue.minPrice && product.price <= priceFilterSliderInputValue.maxPrice;
-  })
+  const priceSliderFilteredFinal = discountFilteredFinal.filter((product) => {
+    return (
+      product.price >= priceFilterSliderInputValue.minPrice &&
+      product.price <= priceFilterSliderInputValue.maxPrice
+    );
+  });
 
   const finalProductList = priceSliderFilteredFinal;
 
