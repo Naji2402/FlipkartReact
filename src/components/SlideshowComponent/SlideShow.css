@@ -106,17 +106,13 @@
 .slide-image-large{
   display: none;
   overflow: hidden;
-  /* scrollbar-width: none; */
-  /* height: 234px; */
   width: 100%;
   align-items: center;
-  /* scroll-snap-type: x mandatory; */
 }
 
 .slide-image-l{
   height: 100%;
   width: 100%;
-  /* scroll-snap-align: center; */
 }
 
 
