@@ -18,7 +18,6 @@ import SlideImgL5 from "./SlideshowComponentImages/SlideImageL5.webp";
 import ArrowRight from "./SlideshowComponentImages/ArrowRight.svg";
 import ArrowLeft from "./SlideshowComponentImages/ArrowLeft.svg";
 
-
 const slides = [
   {
     image: SlideImg1,
@@ -82,7 +81,7 @@ const slidesLarge = [
   {
     img: SlideImgL5,
     description: "imageL5",
-  }
+  },
 ];
 
 function Slide() {
@@ -95,13 +94,11 @@ function Slide() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentLargeIndex, setCurrentLargeIndex] = useState(0);
 
-  
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
       setCurrentLargeIndex((prev) =>
-        prev === slidesLarge.length - 1 ? 0 : prev + 1
+        prev === slidesLarge.length - 1 ? 0 : prev + 1,
       );
     }, 3000);
     return () => clearInterval(timer);
@@ -109,13 +106,13 @@ function Slide() {
 
   function slidePrev() {
     setCurrentLargeIndex((prev) =>
-      prev > 0 ? prev === slidesLarge.length ? 0 :  prev - 1 : prev = 0
+      prev === 0 ? slidesLarge.length - 1 : prev - 1,
     );
   }
 
   function slideNext() {
     setCurrentLargeIndex((prev) =>
-      prev === slidesLarge.length - 1? 0 : prev + 1
+      prev === slidesLarge.length - 1 ? 0 : prev + 1,
     );
   }
 
